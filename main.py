@@ -15,6 +15,45 @@ from github import Github
 # --- CONFIGURATION ---
 st.set_page_config(page_title="LingoClone", page_icon="🦉", layout="centered")
 
+# --- CSS RESPONSIVE POUR MOBILE ---
+st.markdown("""
+<style>
+    /* Style de base pour les ordinateurs */
+    .flashcard {
+        height: 300px;
+        font-size: 3em;
+        padding: 20px;
+    }
+    .question-card {
+        padding: 30px;
+    }
+    .question-title {
+        font-size: 2.5em;
+    }
+    
+    /* Règles spécifiques pour les téléphones portables (écrans < 768px) */
+    @media (max-width: 768px) {
+        .flashcard {
+            height: 200px !important;
+            font-size: 2em !important;
+            padding: 10px !important;
+        }
+        .question-card {
+            padding: 15px !important;
+        }
+        .question-title {
+            font-size: 1.8em !important;
+        }
+        /* Permettre au texte des boutons de passer à la ligne au lieu d'être coupé */
+        .stButton button {
+            white-space: normal !important;
+            word-wrap: break-word !important;
+            min-height: auto !important;
+        }
+    }
+</style>
+""", unsafe_allow_html=True)
+
 DB_PATH = "vocab_db.json"
 DUOLINGO_GREEN = "#58CC02"
 QUIZLET_BLUE = "#4255FF"
@@ -30,7 +69,6 @@ def normalize_text(text):
 
 # --- LOGIQUE BASE DE DONNÉES (CLOUD & LOCAL) ---
 def load_db():
-    # 1. Tentative de chargement depuis GitHub (si l'app est déployée)
     if "GITHUB_TOKEN" in st.secrets and "REPO_NAME" in st.secrets:
         try:
             g = Github(st.secrets["GITHUB_TOKEN"])
@@ -47,7 +85,6 @@ def load_db():
         except Exception as e:
             st.warning("Chargement cloud échoué ou premier lancement. Utilisation locale.")
     
-    # 2. Chargement local (si on est sur PC ou si GitHub n'est pas encore configuré)
     if os.path.exists(DB_PATH):
         try:
             with open(DB_PATH, "r", encoding="utf-8") as f:
@@ -64,7 +101,6 @@ def load_db():
     return {"vocabulary": []}
 
 def save_db(db):
-    # Sauvegarde locale (mémoire temporaire du serveur pendant qu'on joue)
     try:
         with open(DB_PATH, "w", encoding="utf-8") as f:
             json.dump(db, f, indent=4, ensure_ascii=False)
@@ -222,7 +258,7 @@ def next_question(card_id, success, current_mode):
 # --- INTERFACE BARRE LATÉRALE ---
 st.sidebar.title("🦉 LingoClone")
 
-# Bouton de sauvegarde Cloud (visible uniquement si les secrets Github sont configurés)
+# Bouton de sauvegarde Cloud
 if "GITHUB_TOKEN" in st.secrets and "REPO_NAME" in st.secrets:
     if st.sidebar.button("☁️ Sauvegarder ma progression", type="primary", use_container_width=True):
         try:
@@ -414,10 +450,11 @@ elif menu in ["Apprentissage (Quizlet)", "Entraînement (Quiz)", "Expression Ora
             display_text = answer if st.session_state.is_flipped else question
             bg_color = "#f0f8ff" if st.session_state.is_flipped else "#ffffff"
             
+            # Application des CSS responsive pour la carte flash
             st.markdown(f"""
-                <div style="background-color: {bg_color}; height: 300px; display: flex; align-items: center; justify-content: center; 
+                <div class="flashcard" style="background-color: {bg_color}; display: flex; align-items: center; justify-content: center; 
                             border-radius: 15px; border: 2px solid #e0e0e0; box-shadow: 0 4px 10px rgba(0,0,0,0.1); margin-bottom: 20px;">
-                    <h1 style="color: #333; text-align: center; font-size: 3em; margin: 0;">{display_text}</h1>
+                    <h1 style="color: #333; text-align: center; margin: 0;">{display_text}</h1>
                 </div>
             """, unsafe_allow_html=True)
 
@@ -441,10 +478,11 @@ elif menu in ["Apprentissage (Quizlet)", "Entraînement (Quiz)", "Expression Ora
 
         # --- MODE 2 : ENTRAÎNEMENT (DUOLINGO) ---
         elif menu == "Entraînement (Quiz)":
+            # Application des CSS responsive
             st.markdown(f"""
-                <div style="background-color: #f8f9fa; padding: 30px; border-radius: 15px; border-left: 10px solid {DUOLINGO_GREEN}; margin-bottom: 20px;">
+                <div class="question-card" style="background-color: #f8f9fa; border-radius: 15px; border-left: 10px solid {DUOLINGO_GREEN}; margin-bottom: 20px;">
                     <p style="color: #666; margin: 0; font-weight: bold;">Traduisez ceci :</p>
-                    <h2 style="margin: 0; color: #333; font-size: 2.5em;">{question}</h2>
+                    <h2 class="question-title" style="margin: 0; color: #333;">{question}</h2>
                 </div>
             """, unsafe_allow_html=True)
 
@@ -501,10 +539,11 @@ elif menu in ["Apprentissage (Quizlet)", "Entraînement (Quiz)", "Expression Ora
 
         # --- MODE 3 : EXPRESSION ORALE ---
         elif menu == "Expression Orale 🎙️":
+            # Application des CSS responsive
             st.markdown(f"""
-                <div style="background-color: #f8f9fa; padding: 30px; border-radius: 15px; border-left: 10px solid {ORAL_ORANGE}; margin-bottom: 20px;">
+                <div class="question-card" style="background-color: #f8f9fa; border-radius: 15px; border-left: 10px solid {ORAL_ORANGE}; margin-bottom: 20px;">
                     <p style="color: #666; margin: 0; font-weight: bold;">Traduisez à voix haute en portugais :</p>
-                    <h2 style="margin: 0; color: #333; font-size: 2.5em;">{question}</h2>
+                    <h2 class="question-title" style="margin: 0; color: #333;">{question}</h2>
                 </div>
             """, unsafe_allow_html=True)
 
