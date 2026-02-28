@@ -10,7 +10,7 @@ import unicodedata
 from datetime import datetime, timedelta
 from gtts import gTTS
 import speech_recognition as sr
-from github import Github
+from github import Github, Auth # <-- Ajout de Auth ici
 
 # --- CONFIGURATION ---
 st.set_page_config(page_title="LingoClone", page_icon="🦉", layout="centered")
@@ -52,7 +52,6 @@ if not st.session_state.authenticated:
             st.error("Code PIN incorrect.")
     st.markdown('</div>', unsafe_allow_html=True)
     
-    # On arrête l'exécution du reste du script tant que l'utilisateur n'est pas connecté
     st.stop()
 
 
@@ -92,7 +91,9 @@ def normalize_text(text):
 def load_db():
     if "GITHUB_TOKEN" in st.secrets and "REPO_NAME" in st.secrets:
         try:
-            g = Github(st.secrets["GITHUB_TOKEN"])
+            # CORRECTION : Nouvelle méthode d'authentification PyGithub
+            auth = Auth.Token(st.secrets["GITHUB_TOKEN"])
+            g = Github(auth=auth)
             repo = g.get_repo(st.secrets["REPO_NAME"])
             file_content = repo.get_contents(DB_PATH)
             data = json.loads(file_content.decoded_content.decode("utf-8"))
@@ -104,7 +105,7 @@ def load_db():
                     if "next_review_date_apprentissage" not in c["srs_data"]: c["srs_data"]["next_review_date_apprentissage"] = c["srs_data"].get("next_review_date", datetime.now().isoformat())
             return data
         except Exception as e:
-            pass # Si erreur cloud, on passe au chargement local
+            pass 
     
     if os.path.exists(DB_PATH):
         try:
@@ -248,10 +249,13 @@ st.sidebar.title("🦉 LingoClone")
 
 # Bouton de sauvegarde Cloud (Seulement si GitHub configuré)
 if "GITHUB_TOKEN" in st.secrets and "REPO_NAME" in st.secrets:
-    if st.sidebar.button("☁️ Sauvegarder ma progression", type="primary", use_container_width=True):
+    # CORRECTION : Remplacement de use_container_width par width="stretch"
+    if st.sidebar.button("☁️ Sauvegarder ma progression", type="primary", width="stretch"):
         try:
             with st.spinner("Sauvegarde sur le cloud en cours..."):
-                g = Github(st.secrets["GITHUB_TOKEN"])
+                # CORRECTION : Nouvelle méthode d'authentification PyGithub
+                auth = Auth.Token(st.secrets["GITHUB_TOKEN"])
+                g = Github(auth=auth)
                 repo = g.get_repo(st.secrets["REPO_NAME"])
                 try:
                     contents = repo.get_contents(DB_PATH)
@@ -267,7 +271,7 @@ menu = st.sidebar.radio("Navigation", ["Apprentissage (Quizlet)", "Entraînement
 
 if menu in ["Apprentissage (Quizlet)", "Entraînement (Quiz)", "Expression Orale 🎙️"] and len(st.session_state.play_queue) > 0 and st.session_state.current_step < len(st.session_state.play_queue):
     st.sidebar.divider()
-    st.sidebar.button("🛑 Quitter la session", on_click=quit_session, use_container_width=True, type="primary")
+    st.sidebar.button("🛑 Quitter la session", on_click=quit_session, width="stretch", type="primary")
 
 # --- PAGES ---
 if menu == "Paramètres":
@@ -309,12 +313,12 @@ elif menu == "Dictionnaires 📖":
     st.header("📖 Dictionnaires en ligne")
     st.write("Ouvrez le dictionnaire complet pour vos recherches :")
     st.markdown("<br>", unsafe_allow_html=True)
-    st.link_button("🌐 Ouvrir Lexilogos (Français ↔️ Portugais)", "https://www.lexilogos.com/frances_lingua_dicionario.htm", use_container_width=True)
+    st.link_button("🌐 Ouvrir Lexilogos (Français ↔️ Portugais)", "https://www.lexilogos.com/frances_lingua_dicionario.htm", width="stretch")
 
 elif menu == "Bibliothèque":
     st.header("📚 Liste de mots")
     if st.session_state.db["vocabulary"]:
-        st.dataframe(pd.DataFrame([{"Liste": c.get("category", "Général"), "Portugais": c["term_target"], "Français": c["term_primary"], "Score Quiz": c["srs_data"].get("score", 0)} for c in st.session_state.db["vocabulary"]]), use_container_width=True)
+        st.dataframe(pd.DataFrame([{"Liste": c.get("category", "Général"), "Portugais": c["term_target"], "Français": c["term_primary"], "Score Quiz": c["srs_data"].get("score", 0)} for c in st.session_state.db["vocabulary"]]), use_container_width=True) # use_container_width est encore valide pour st.dataframe
     else:
         st.info("Votre bibliothèque est vide.")
 
@@ -327,8 +331,8 @@ elif menu in ["Apprentissage (Quizlet)", "Entraînement (Quiz)", "Expression Ora
             with c1:
                 st.markdown("**📚 Listes à inclure :**")
                 btn_col1, btn_col2 = st.columns(2)
-                btn_col1.button("Tout cocher", on_click=select_all_cats, use_container_width=True)
-                btn_col2.button("Tout décocher", on_click=deselect_all_cats, use_container_width=True)
+                btn_col1.button("Tout cocher", on_click=select_all_cats, width="stretch")
+                btn_col2.button("Tout décocher", on_click=deselect_all_cats, width="stretch")
                 st.multiselect("Sélection", options=ALL_CATEGORIES, key="multiselect_cats", label_visibility="collapsed")
                 
                 valid_count = len([c for c in st.session_state.db["vocabulary"] if c.get("category", "Général") in st.session_state.multiselect_cats])
@@ -349,9 +353,9 @@ elif menu in ["Apprentissage (Quizlet)", "Entraînement (Quiz)", "Expression Ora
         elif valid_count == 0: st.warning("⚠️ Les listes sélectionnées sont vides.")
         else:
             col_srs, col_libre, col_infini = st.columns(3)
-            with col_srs: st.button("LANCER (SRS) 📚", on_click=generate_session, args=("srs", menu), use_container_width=True, type="primary")
-            with col_libre: st.button("SÉRIE LIBRE 🎯", on_click=generate_session, args=("libre", menu), use_container_width=True)
-            with col_infini: st.button("MODE INFINI ♾️", on_click=generate_session, args=("infini", menu), use_container_width=True)
+            with col_srs: st.button("LANCER (SRS) 📚", on_click=generate_session, args=("srs", menu), width="stretch", type="primary")
+            with col_libre: st.button("SÉRIE LIBRE 🎯", on_click=generate_session, args=("libre", menu), width="stretch")
+            with col_infini: st.button("MODE INFINI ♾️", on_click=generate_session, args=("infini", menu), width="stretch")
 
     else:
         card = st.session_state.play_queue[st.session_state.current_step]
@@ -387,11 +391,14 @@ elif menu in ["Apprentissage (Quizlet)", "Entraînement (Quiz)", "Expression Ora
             st.markdown(f'<div class="flashcard" style="background-color:{"#f0f8ff" if st.session_state.is_flipped else "#ffffff"}; display:flex; align-items:center; justify-content:center; border-radius:15px; border:2px solid #e0e0e0; margin-bottom:20px;"><h1 style="color:#333; text-align:center; margin:0;">{txt}</h1></div>', unsafe_allow_html=True)
             if st.session_state.pt_audio: st.audio(st.session_state.pt_audio, format="audio/mp3")
             if not st.session_state.is_flipped:
-                if st.button("🔄 Tourner", use_container_width=True): st.session_state.is_flipped = True; st.rerun()
+                if st.button("🔄 Tourner", width="stretch"): st.session_state.is_flipped = True; st.rerun()
             else:
+                if st.button("🔄 Voir la question", width="stretch"): st.session_state.is_flipped = False; st.rerun()
+                st.divider()
+                st.markdown("<p style='text-align: center; font-weight: bold;'>Avez-vous trouvé ?</p>", unsafe_allow_html=True)
                 c1, c2 = st.columns(2)
-                c1.button("❌ À revoir", on_click=next_question, args=(card["id"], False, menu), use_container_width=True)
-                c2.button("✅ Acquis", on_click=next_question, args=(card["id"], True, menu), use_container_width=True, type="primary")
+                c1.button("❌ À revoir", on_click=next_question, args=(card["id"], False, menu), width="stretch")
+                c2.button("✅ Acquis", on_click=next_question, args=(card["id"], True, menu), width="stretch", type="primary")
 
         elif menu == "Entraînement (Quiz)":
             st.markdown(f'<div class="question-card" style="background-color:#f8f9fa; border-radius:15px; border-left:10px solid {DUOLINGO_GREEN}; margin-bottom:20px;"><p style="color:#666; margin:0; font-weight:bold;">Traduisez ceci :</p><h2 class="question-title" style="margin:0; color:#333;">{st.session_state.current_question}</h2></div>', unsafe_allow_html=True)
@@ -400,17 +407,17 @@ elif menu in ["Apprentissage (Quizlet)", "Entraînement (Quiz)", "Expression Ora
             if not st.session_state.answer_checked:
                 if st.session_state.ex_type == "qcm":
                     for o in st.session_state.options:
-                        if st.button(o, use_container_width=True):
+                        if st.button(o, width="stretch"):
                             st.session_state.is_correct = (o == st.session_state.current_answer)
                             if not st.session_state.is_correct: st.session_state.has_failed = True
                             st.session_state.user_input_val = o; st.session_state.answer_checked = True; st.rerun()
                     st.markdown("<br>", unsafe_allow_html=True)
-                    if st.button("🤷 Je ne sais pas", use_container_width=True): set_dont_know(); st.rerun()
+                    if st.button("🤷 Je ne sais pas", width="stretch"): set_dont_know(); st.rerun()
                 else:
                     user_t = st.text_input("Votre traduction").strip()
                     c1, c2 = st.columns(2)
                     with c1:
-                        if st.button("VÉRIFIER", use_container_width=True, type="primary"):
+                        if st.button("VÉRIFIER", width="stretch", type="primary"):
                             if user_t:
                                 is_cor = (normalize_text(user_t) == normalize_text(st.session_state.current_answer))
                                 st.session_state.is_correct = is_cor
@@ -418,17 +425,17 @@ elif menu in ["Apprentissage (Quizlet)", "Entraînement (Quiz)", "Expression Ora
                                 st.session_state.user_input_val = user_t; st.session_state.answer_checked = True; st.rerun()
                             else: st.warning("Veuillez écrire une réponse.")
                     with c2:
-                        if st.button("🤷 Je ne sais pas", use_container_width=True): set_dont_know(); st.rerun()
+                        if st.button("🤷 Je ne sais pas", width="stretch"): set_dont_know(); st.rerun()
             else:
                 if st.session_state.is_correct:
-                    st.success(f"### 🎉 Correct !\n{st.session_state.current_answer}")
+                    st.success(f"### 🎉 Correct !\nLa réponse est bien : **{st.session_state.current_answer}**")
                     if card["term_target"] == st.session_state.current_answer and st.session_state.pt_audio: st.audio(st.session_state.pt_audio)
-                    st.button("CONTINUER", on_click=next_question, args=(card["id"], not st.session_state.has_failed, menu), type="primary", use_container_width=True)
+                    st.button("CONTINUER", on_click=next_question, args=(card["id"], not st.session_state.has_failed, menu), type="primary", width="stretch")
                 else:
-                    if st.session_state.user_input_val == "[Je ne sais pas]": st.info(f"### 💡 Réponse :\n{st.session_state.current_answer}")
+                    if st.session_state.user_input_val == "[Je ne sais pas]": st.info(f"### 💡 Réponse :\nLa traduction de **{question}** est : **{st.session_state.current_answer}**")
                     else: st.error(f"### ❌ Oups !\nVous avez répondu : *{st.session_state.user_input_val}*\nBonne réponse : **{st.session_state.current_answer}**")
                     if card["term_target"] == st.session_state.current_answer and st.session_state.pt_audio: st.audio(st.session_state.pt_audio)
-                    st.button("CONTINUER", on_click=next_question, args=(card["id"], False, menu), type="primary", use_container_width=True)
+                    st.button("CONTINUER", on_click=next_question, args=(card["id"], False, menu), type="primary", width="stretch")
 
         elif menu == "Expression Orale 🎙️":
             st.markdown(f'<div class="question-card" style="background-color:#f8f9fa; border-radius:15px; border-left:10px solid {ORAL_ORANGE}; margin-bottom:20px;"><p style="color:#666; margin:0; font-weight:bold;">Traduisez à voix haute :</p><h2 class="question-title" style="margin:0; color:#333;">{st.session_state.current_question}</h2></div>', unsafe_allow_html=True)
@@ -445,16 +452,16 @@ elif menu in ["Apprentissage (Quizlet)", "Entraînement (Quiz)", "Expression Ora
                             if not is_cor: st.session_state.has_failed = True
                             st.session_state.answer_checked = True; st.rerun()
                 st.markdown("<br>", unsafe_allow_html=True)
-                if st.button("🤷 Je ne sais pas", use_container_width=True): set_dont_know(); st.rerun()
+                if st.button("🤷 Je ne sais pas", width="stretch"): set_dont_know(); st.rerun()
             else:
                 if st.session_state.is_correct:
                     st.success(f"### 🎉 Parfait !\nJ'ai entendu : **{st.session_state.user_input_val}**")
                     if st.session_state.pt_audio: st.audio(st.session_state.pt_audio)
-                    st.button("CONTINUER", on_click=next_question, args=(card["id"], not st.session_state.has_failed, "Entraînement (Quiz)"), type="primary", use_container_width=True)
+                    st.button("CONTINUER", on_click=next_question, args=(card["id"], not st.session_state.has_failed, "Entraînement (Quiz)"), type="primary", width="stretch")
                 else:
                     if st.session_state.user_input_val == "[Je ne sais pas]": st.info(f"### 💡 Réponse :\n**{st.session_state.current_answer}**")
                     else: st.error(f"### ❌ Presque !\nJ'ai entendu : *{st.session_state.user_input_val}*\nIl fallait dire : **{st.session_state.current_answer}**")
                     if st.session_state.pt_audio: st.audio(st.session_state.pt_audio)
                     c1, c2 = st.columns(2)
-                    c1.button("🔄 RÉESSAYER", on_click=retry_oral, use_container_width=True)
-                    c2.button("CONTINUER ➡️", on_click=next_question, args=(card["id"], False, "Entraînement (Quiz)"), type="primary", use_container_width=True)
+                    c1.button("🔄 RÉESSAYER", on_click=retry_oral, width="stretch")
+                    c2.button("CONTINUER ➡️", on_click=next_question, args=(card["id"], False, "Entraînement (Quiz)"), type="primary", width="stretch")
