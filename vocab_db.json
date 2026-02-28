@@ -151,9 +151,9 @@
             "term_primary": "Acheter",
             "srs_data": {
                 "score": 0,
-                "score_apprentissage": 0,
+                "score_apprentissage": 1,
                 "next_review_date": "2026-02-28T17:16:09.047818",
-                "next_review_date_apprentissage": "2026-02-28T17:16:09.047821"
+                "next_review_date_apprentissage": "2026-03-01T17:23:20.511634"
             }
         },
         {
@@ -271,9 +271,9 @@
             "term_primary": "Une fois",
             "srs_data": {
                 "score": 0,
-                "score_apprentissage": 0,
+                "score_apprentissage": -1,
                 "next_review_date": "2026-02-28T17:16:09.048861",
-                "next_review_date_apprentissage": "2026-02-28T17:16:09.048864"
+                "next_review_date_apprentissage": "2026-02-28T17:23:32.394536"
             }
         },
         {
@@ -919,9 +919,9 @@
             "term_primary": "La mayonnaise",
             "srs_data": {
                 "score": 0,
-                "score_apprentissage": 0,
+                "score_apprentissage": -1,
                 "next_review_date": "2026-02-28T17:16:59.474313",
-                "next_review_date_apprentissage": "2026-02-28T17:16:59.474319"
+                "next_review_date_apprentissage": "2026-02-28T17:23:12.392039"
             }
         },
         {
@@ -931,9 +931,9 @@
             "term_primary": "Le lait",
             "srs_data": {
                 "score": 0,
-                "score_apprentissage": 0,
+                "score_apprentissage": 1,
                 "next_review_date": "2026-02-28T17:16:59.474499",
-                "next_review_date_apprentissage": "2026-02-28T17:16:59.474505"
+                "next_review_date_apprentissage": "2026-03-01T17:22:56.733544"
             }
         },
         {
@@ -1015,9 +1015,9 @@
             "term_primary": "Le poivre",
             "srs_data": {
                 "score": 0,
-                "score_apprentissage": 0,
+                "score_apprentissage": -1,
                 "next_review_date": "2026-02-28T17:16:59.476030",
-                "next_review_date_apprentissage": "2026-02-28T17:16:59.476035"
+                "next_review_date_apprentissage": "2026-02-28T17:23:04.015768"
             }
         },
         {
