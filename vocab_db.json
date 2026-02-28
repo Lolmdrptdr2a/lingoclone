@@ -1,3 +1,1288 @@
 {
-    "vocabulary": []
+    "vocabulary": [
+        {
+            "id": "90b79d6e-0557-4077-8b7e-126b126eec0b",
+            "category": "Jours, Famille & Verbes Généraux",
+            "term_target": "Segunda-feira",
+            "term_primary": "Lundi",
+            "srs_data": {
+                "score": 0,
+                "score_apprentissage": 0,
+                "next_review_date": "2026-02-28T17:16:09.046360",
+                "next_review_date_apprentissage": "2026-02-28T17:16:09.046367"
+            }
+        },
+        {
+            "id": "12b00236-c472-4120-a639-2606fd4e845c",
+            "category": "Jours, Famille & Verbes Généraux",
+            "term_target": "Terça-feira",
+            "term_primary": "Mardi",
+            "srs_data": {
+                "score": 0,
+                "score_apprentissage": 0,
+                "next_review_date": "2026-02-28T17:16:09.046495",
+                "next_review_date_apprentissage": "2026-02-28T17:16:09.046499"
+            }
+        },
+        {
+            "id": "cc1d6b1c-2400-4f4d-ba3e-dc506b1d3230",
+            "category": "Jours, Famille & Verbes Généraux",
+            "term_target": "Quarta-feira",
+            "term_primary": "Mercredi",
+            "srs_data": {
+                "score": 0,
+                "score_apprentissage": 0,
+                "next_review_date": "2026-02-28T17:16:09.046610",
+                "next_review_date_apprentissage": "2026-02-28T17:16:09.046614"
+            }
+        },
+        {
+            "id": "8fba4f44-0091-4490-8171-eefd38fc4274",
+            "category": "Jours, Famille & Verbes Généraux",
+            "term_target": "Quinta-feira",
+            "term_primary": "Jeudi",
+            "srs_data": {
+                "score": 0,
+                "score_apprentissage": 0,
+                "next_review_date": "2026-02-28T17:16:09.046756",
+                "next_review_date_apprentissage": "2026-02-28T17:16:09.046760"
+            }
+        },
+        {
+            "id": "0a936a53-3297-4e7d-9043-0f1af6b8c1f5",
+            "category": "Jours, Famille & Verbes Généraux",
+            "term_target": "Sexta-feira",
+            "term_primary": "Vendredi",
+            "srs_data": {
+                "score": 0,
+                "score_apprentissage": 0,
+                "next_review_date": "2026-02-28T17:16:09.046867",
+                "next_review_date_apprentissage": "2026-02-28T17:16:09.046871"
+            }
+        },
+        {
+            "id": "0ac86631-d2a1-4020-8d04-1efb66f598ac",
+            "category": "Jours, Famille & Verbes Généraux",
+            "term_target": "Sábado",
+            "term_primary": "Samedi",
+            "srs_data": {
+                "score": 0,
+                "score_apprentissage": 0,
+                "next_review_date": "2026-02-28T17:16:09.046970",
+                "next_review_date_apprentissage": "2026-02-28T17:16:09.046973"
+            }
+        },
+        {
+            "id": "654f3411-744f-4be7-b6e3-d0c06c7d086e",
+            "category": "Jours, Famille & Verbes Généraux",
+            "term_target": "Domingo",
+            "term_primary": "Dimanche",
+            "srs_data": {
+                "score": 0,
+                "score_apprentissage": 0,
+                "next_review_date": "2026-02-28T17:16:09.047068",
+                "next_review_date_apprentissage": "2026-02-28T17:16:09.047071"
+            }
+        },
+        {
+            "id": "a721ebfd-280b-48f0-854b-e54eabbc82d6",
+            "category": "Jours, Famille & Verbes Généraux",
+            "term_target": "A sogra",
+            "term_primary": "La belle-mère",
+            "srs_data": {
+                "score": 0,
+                "score_apprentissage": 0,
+                "next_review_date": "2026-02-28T17:16:09.047167",
+                "next_review_date_apprentissage": "2026-02-28T17:16:09.047170"
+            }
+        },
+        {
+            "id": "a0df3f09-c692-4f69-9173-e7bf55c0cb13",
+            "category": "Jours, Famille & Verbes Généraux",
+            "term_target": "O sogro",
+            "term_primary": "Le beau-père",
+            "srs_data": {
+                "score": 0,
+                "score_apprentissage": 0,
+                "next_review_date": "2026-02-28T17:16:09.047268",
+                "next_review_date_apprentissage": "2026-02-28T17:16:09.047271"
+            }
+        },
+        {
+            "id": "3ac213e8-0a71-44d5-952a-5ac119999b83",
+            "category": "Jours, Famille & Verbes Généraux",
+            "term_target": "Atraso",
+            "term_primary": "En retard",
+            "srs_data": {
+                "score": 0,
+                "score_apprentissage": 0,
+                "next_review_date": "2026-02-28T17:16:09.047367",
+                "next_review_date_apprentissage": "2026-02-28T17:16:09.047371"
+            }
+        },
+        {
+            "id": "00a25e41-455b-4ef5-ad82-ad23355e1a06",
+            "category": "Jours, Famille & Verbes Généraux",
+            "term_target": "Atrasar",
+            "term_primary": "Retarder",
+            "srs_data": {
+                "score": 0,
+                "score_apprentissage": 0,
+                "next_review_date": "2026-02-28T17:16:09.047547",
+                "next_review_date_apprentissage": "2026-02-28T17:16:09.047551"
+            }
+        },
+        {
+            "id": "7d53fe77-9938-4161-be66-f6f2c790c065",
+            "category": "Jours, Famille & Verbes Généraux",
+            "term_target": "Avisar",
+            "term_primary": "Prévenir",
+            "srs_data": {
+                "score": 0,
+                "score_apprentissage": 0,
+                "next_review_date": "2026-02-28T17:16:09.047701",
+                "next_review_date_apprentissage": "2026-02-28T17:16:09.047706"
+            }
+        },
+        {
+            "id": "43237811-dc9e-4883-b232-f02f0bcbd6f9",
+            "category": "Jours, Famille & Verbes Généraux",
+            "term_target": "Comprar",
+            "term_primary": "Acheter",
+            "srs_data": {
+                "score": 0,
+                "score_apprentissage": 0,
+                "next_review_date": "2026-02-28T17:16:09.047818",
+                "next_review_date_apprentissage": "2026-02-28T17:16:09.047821"
+            }
+        },
+        {
+            "id": "fcb0decf-0be0-4acb-aa3d-16dc947a2e94",
+            "category": "Jours, Famille & Verbes Généraux",
+            "term_target": "Custar",
+            "term_primary": "Coûter",
+            "srs_data": {
+                "score": 0,
+                "score_apprentissage": 0,
+                "next_review_date": "2026-02-28T17:16:09.047920",
+                "next_review_date_apprentissage": "2026-02-28T17:16:09.047923"
+            }
+        },
+        {
+            "id": "ab206302-20c1-4e74-a2a0-a36437366246",
+            "category": "Jours, Famille & Verbes Généraux",
+            "term_target": "Repartir",
+            "term_primary": "Découper / Répartir",
+            "srs_data": {
+                "score": 0,
+                "score_apprentissage": 0,
+                "next_review_date": "2026-02-28T17:16:09.048018",
+                "next_review_date_apprentissage": "2026-02-28T17:16:09.048021"
+            }
+        },
+        {
+            "id": "3c75cd86-04b7-4f44-993f-52d48f5d1eb8",
+            "category": "Jours, Famille & Verbes Généraux",
+            "term_target": "Dividir",
+            "term_primary": "Diviser / Partager",
+            "srs_data": {
+                "score": 0,
+                "score_apprentissage": 0,
+                "next_review_date": "2026-02-28T17:16:09.048116",
+                "next_review_date_apprentissage": "2026-02-28T17:16:09.048119"
+            }
+        },
+        {
+            "id": "fb60908b-3c5d-45f5-8cf9-10420b4575cc",
+            "category": "Jours, Famille & Verbes Généraux",
+            "term_target": "Encontrar",
+            "term_primary": "Trouver",
+            "srs_data": {
+                "score": 0,
+                "score_apprentissage": 0,
+                "next_review_date": "2026-02-28T17:16:09.048214",
+                "next_review_date_apprentissage": "2026-02-28T17:16:09.048218"
+            }
+        },
+        {
+            "id": "f9d45085-5b07-4a5a-b12c-53dce3a9b644",
+            "category": "Jours, Famille & Verbes Généraux",
+            "term_target": "Ir",
+            "term_primary": "Aller",
+            "srs_data": {
+                "score": 0,
+                "score_apprentissage": 0,
+                "next_review_date": "2026-02-28T17:16:09.048313",
+                "next_review_date_apprentissage": "2026-02-28T17:16:09.048316"
+            }
+        },
+        {
+            "id": "0b426fa3-43cb-42cb-a8b7-f61463381565",
+            "category": "Jours, Famille & Verbes Généraux",
+            "term_target": "Fomos",
+            "term_primary": "Nous sommes allés",
+            "srs_data": {
+                "score": 0,
+                "score_apprentissage": 0,
+                "next_review_date": "2026-02-28T17:16:09.048410",
+                "next_review_date_apprentissage": "2026-02-28T17:16:09.048413"
+            }
+        },
+        {
+            "id": "57c56753-c13e-496b-924e-e74beb8472a5",
+            "category": "Jours, Famille & Verbes Généraux",
+            "term_target": "O certo",
+            "term_primary": "Le bon / Sûr",
+            "srs_data": {
+                "score": 0,
+                "score_apprentissage": 0,
+                "next_review_date": "2026-02-28T17:16:09.048515",
+                "next_review_date_apprentissage": "2026-02-28T17:16:09.048519"
+            }
+        },
+        {
+            "id": "52f33d04-41c9-4a04-bae9-8c6026787ef6",
+            "category": "Jours, Famille & Verbes Généraux",
+            "term_target": "O sítio",
+            "term_primary": "Le lieu / L'endroit",
+            "srs_data": {
+                "score": 0,
+                "score_apprentissage": 0,
+                "next_review_date": "2026-02-28T17:16:09.048614",
+                "next_review_date_apprentissage": "2026-02-28T17:16:09.048617"
+            }
+        },
+        {
+            "id": "9cb8fc59-15c0-458f-b599-da4a58b0f06d",
+            "category": "Jours, Famille & Verbes Généraux",
+            "term_target": "Cada",
+            "term_primary": "Chaque",
+            "srs_data": {
+                "score": 0,
+                "score_apprentissage": 0,
+                "next_review_date": "2026-02-28T17:16:09.048756",
+                "next_review_date_apprentissage": "2026-02-28T17:16:09.048760"
+            }
+        },
+        {
+            "id": "5183d3a0-07a3-44a1-9544-daf7d7013172",
+            "category": "Jours, Famille & Verbes Généraux",
+            "term_target": "Uma vez",
+            "term_primary": "Une fois",
+            "srs_data": {
+                "score": 0,
+                "score_apprentissage": 0,
+                "next_review_date": "2026-02-28T17:16:09.048861",
+                "next_review_date_apprentissage": "2026-02-28T17:16:09.048864"
+            }
+        },
+        {
+            "id": "ebf5c307-1f04-4a3f-8425-b5771bdd22c9",
+            "category": "Jours, Famille & Verbes Généraux",
+            "term_target": "Duas vezes",
+            "term_primary": "Deux fois",
+            "srs_data": {
+                "score": 0,
+                "score_apprentissage": 0,
+                "next_review_date": "2026-02-28T17:16:09.048959",
+                "next_review_date_apprentissage": "2026-02-28T17:16:09.048962"
+            }
+        },
+        {
+            "id": "a672f511-4734-4559-96c1-bfc0c44ec632",
+            "category": "Jours, Famille & Verbes Généraux",
+            "term_target": "Há pouco",
+            "term_primary": "Il y a peu / Juste avant",
+            "srs_data": {
+                "score": 0,
+                "score_apprentissage": 0,
+                "next_review_date": "2026-02-28T17:16:09.049079",
+                "next_review_date_apprentissage": "2026-02-28T17:16:09.049083"
+            }
+        },
+        {
+            "id": "8b148a76-9e84-4273-ba3b-699c5c51f0d2",
+            "category": "Jours, Famille & Verbes Généraux",
+            "term_target": "O tecido",
+            "term_primary": "Le tissu",
+            "srs_data": {
+                "score": 0,
+                "score_apprentissage": 0,
+                "next_review_date": "2026-02-28T17:16:09.049209",
+                "next_review_date_apprentissage": "2026-02-28T17:16:09.049214"
+            }
+        },
+        {
+            "id": "88b92c2e-bd33-4a92-9388-ea6c940f00eb",
+            "category": "Au Restaurant & Phrases utiles",
+            "term_target": "A hora de pedir",
+            "term_primary": "L'heure de commander",
+            "srs_data": {
+                "score": 0,
+                "score_apprentissage": 0,
+                "next_review_date": "2026-02-28T17:16:39.979109",
+                "next_review_date_apprentissage": "2026-02-28T17:16:39.979116"
+            }
+        },
+        {
+            "id": "556d8b7d-2f28-43de-80d1-b989fdf8ab27",
+            "category": "Au Restaurant & Phrases utiles",
+            "term_target": "Decifrar o menu",
+            "term_primary": "Déchiffrer le menu",
+            "srs_data": {
+                "score": 0,
+                "score_apprentissage": 0,
+                "next_review_date": "2026-02-28T17:16:39.979243",
+                "next_review_date_apprentissage": "2026-02-28T17:16:39.979247"
+            }
+        },
+        {
+            "id": "b39ba2c7-5184-473a-969d-274977524e18",
+            "category": "Au Restaurant & Phrases utiles",
+            "term_target": "Com licença",
+            "term_primary": "Excusez-moi / Avec votre permission",
+            "srs_data": {
+                "score": 0,
+                "score_apprentissage": 0,
+                "next_review_date": "2026-02-28T17:16:39.979352",
+                "next_review_date_apprentissage": "2026-02-28T17:16:39.979355"
+            }
+        },
+        {
+            "id": "d52a5e79-4aaa-423c-98cf-d1caa6059291",
+            "category": "Au Restaurant & Phrases utiles",
+            "term_target": "O empregado",
+            "term_primary": "L'employé (Le serveur)",
+            "srs_data": {
+                "score": 0,
+                "score_apprentissage": 0,
+                "next_review_date": "2026-02-28T17:16:39.979455",
+                "next_review_date_apprentissage": "2026-02-28T17:16:39.979459"
+            }
+        },
+        {
+            "id": "8828e8f6-5c96-4749-ac91-33b1ac604070",
+            "category": "Au Restaurant & Phrases utiles",
+            "term_target": "Traz a ementa",
+            "term_primary": "Apporte le menu",
+            "srs_data": {
+                "score": 0,
+                "score_apprentissage": 0,
+                "next_review_date": "2026-02-28T17:16:39.979559",
+                "next_review_date_apprentissage": "2026-02-28T17:16:39.979562"
+            }
+        },
+        {
+            "id": "c1fa10ba-4eda-4d57-9e9f-8fc5513310ab",
+            "category": "Au Restaurant & Phrases utiles",
+            "term_target": "O cardápio / A ementa",
+            "term_primary": "Le menu",
+            "srs_data": {
+                "score": 0,
+                "score_apprentissage": 0,
+                "next_review_date": "2026-02-28T17:16:39.979681",
+                "next_review_date_apprentissage": "2026-02-28T17:16:39.979685"
+            }
+        },
+        {
+            "id": "86403ecb-6c77-401e-a90a-edb1e80992d7",
+            "category": "Au Restaurant & Phrases utiles",
+            "term_target": "A lista de vinhos",
+            "term_primary": "La liste des vins",
+            "srs_data": {
+                "score": 0,
+                "score_apprentissage": 0,
+                "next_review_date": "2026-02-28T17:16:39.979789",
+                "next_review_date_apprentissage": "2026-02-28T17:16:39.979792"
+            }
+        },
+        {
+            "id": "bfa03ae6-b8ad-4e22-a19a-14e25033f082",
+            "category": "Au Restaurant & Phrases utiles",
+            "term_target": "A conta",
+            "term_primary": "L'addition",
+            "srs_data": {
+                "score": 0,
+                "score_apprentissage": 0,
+                "next_review_date": "2026-02-28T17:16:39.979893",
+                "next_review_date_apprentissage": "2026-02-28T17:16:39.979896"
+            }
+        },
+        {
+            "id": "52ab7f2d-709f-4e70-a705-5036c4be5401",
+            "category": "Au Restaurant & Phrases utiles",
+            "term_target": "Gorjeta",
+            "term_primary": "Pourboire",
+            "srs_data": {
+                "score": 0,
+                "score_apprentissage": 0,
+                "next_review_date": "2026-02-28T17:16:39.979991",
+                "next_review_date_apprentissage": "2026-02-28T17:16:39.979994"
+            }
+        },
+        {
+            "id": "03141599-5417-4e6c-a080-91d750997486",
+            "category": "Au Restaurant & Phrases utiles",
+            "term_target": "Pagar com cartão",
+            "term_primary": "Payer par CB (carte bancaire)",
+            "srs_data": {
+                "score": 0,
+                "score_apprentissage": 0,
+                "next_review_date": "2026-02-28T17:16:39.980092",
+                "next_review_date_apprentissage": "2026-02-28T17:16:39.980096"
+            }
+        },
+        {
+            "id": "21168088-d9c7-4df7-b1cd-6962a92b0e9c",
+            "category": "Au Restaurant & Phrases utiles",
+            "term_target": "Da mudança",
+            "term_primary": "Du changement / La monnaie",
+            "srs_data": {
+                "score": 0,
+                "score_apprentissage": 0,
+                "next_review_date": "2026-02-28T17:16:39.980191",
+                "next_review_date_apprentissage": "2026-02-28T17:16:39.980193"
+            }
+        },
+        {
+            "id": "3728150a-fe85-4cc3-ae00-2c94575c3f01",
+            "category": "Au Restaurant & Phrases utiles",
+            "term_target": "O que recomenda?",
+            "term_primary": "Que recommandez-vous ?",
+            "srs_data": {
+                "score": 0,
+                "score_apprentissage": 0,
+                "next_review_date": "2026-02-28T17:16:39.980297",
+                "next_review_date_apprentissage": "2026-02-28T17:16:39.980301"
+            }
+        },
+        {
+            "id": "fc8f8813-c462-4e24-82b5-9484d8e88a35",
+            "category": "Au Restaurant & Phrases utiles",
+            "term_target": "Quero por favor",
+            "term_primary": "Je voudrais s'il vous plaît",
+            "srs_data": {
+                "score": 0,
+                "score_apprentissage": 0,
+                "next_review_date": "2026-02-28T17:16:39.980396",
+                "next_review_date_apprentissage": "2026-02-28T17:16:39.980400"
+            }
+        },
+        {
+            "id": "89ae0859-6ef6-438f-a5a1-5776ed007080",
+            "category": "Au Restaurant & Phrases utiles",
+            "term_target": "Tem carne?",
+            "term_primary": "Y a-t-il de la viande ?",
+            "srs_data": {
+                "score": 0,
+                "score_apprentissage": 0,
+                "next_review_date": "2026-02-28T17:16:39.980493",
+                "next_review_date_apprentissage": "2026-02-28T17:16:39.980496"
+            }
+        },
+        {
+            "id": "3a520354-2660-44bd-844e-49b6fd1637b9",
+            "category": "Au Restaurant & Phrases utiles",
+            "term_target": "Tem marisco?",
+            "term_primary": "Y a-t-il des fruits de mer ?",
+            "srs_data": {
+                "score": 0,
+                "score_apprentissage": 0,
+                "next_review_date": "2026-02-28T17:16:39.980589",
+                "next_review_date_apprentissage": "2026-02-28T17:16:39.980592"
+            }
+        },
+        {
+            "id": "c8bb74ad-986d-457e-bcbd-b2591a37da0d",
+            "category": "Au Restaurant & Phrases utiles",
+            "term_target": "Sentar fora",
+            "term_primary": "S'asseoir dehors",
+            "srs_data": {
+                "score": 0,
+                "score_apprentissage": 0,
+                "next_review_date": "2026-02-28T17:16:39.980721",
+                "next_review_date_apprentissage": "2026-02-28T17:16:39.980724"
+            }
+        },
+        {
+            "id": "de9ae564-6a22-43ab-a1f7-4609963cd210",
+            "category": "Au Restaurant & Phrases utiles",
+            "term_target": "Dentro",
+            "term_primary": "À l'intérieur",
+            "srs_data": {
+                "score": 0,
+                "score_apprentissage": 0,
+                "next_review_date": "2026-02-28T17:16:39.980824",
+                "next_review_date_apprentissage": "2026-02-28T17:16:39.980827"
+            }
+        },
+        {
+            "id": "dacdce18-6ea8-4c88-9410-f5154c1b9139",
+            "category": "Au Restaurant & Phrases utiles",
+            "term_target": "Uma bica curta",
+            "term_primary": "Un café court",
+            "srs_data": {
+                "score": 0,
+                "score_apprentissage": 0,
+                "next_review_date": "2026-02-28T17:16:39.980920",
+                "next_review_date_apprentissage": "2026-02-28T17:16:39.980923"
+            }
+        },
+        {
+            "id": "00c13c82-1e2b-4d2d-8592-870abd5f2b0e",
+            "category": "Au Restaurant & Phrases utiles",
+            "term_target": "Estás com fome?",
+            "term_primary": "As-tu faim ?",
+            "srs_data": {
+                "score": 0,
+                "score_apprentissage": 0,
+                "next_review_date": "2026-02-28T17:16:39.981034",
+                "next_review_date_apprentissage": "2026-02-28T17:16:39.981038"
+            }
+        },
+        {
+            "id": "4b59b0aa-60bd-40c3-a5de-eb0ab7d270f8",
+            "category": "Au Restaurant & Phrases utiles",
+            "term_target": "Bom apetite",
+            "term_primary": "Bon appétit",
+            "srs_data": {
+                "score": 0,
+                "score_apprentissage": 0,
+                "next_review_date": "2026-02-28T17:16:39.981139",
+                "next_review_date_apprentissage": "2026-02-28T17:16:39.981142"
+            }
+        },
+        {
+            "id": "27003f72-53b7-4e00-b0d1-7ca0835625c2",
+            "category": "Au Restaurant & Phrases utiles",
+            "term_target": "Saúde",
+            "term_primary": "Santé",
+            "srs_data": {
+                "score": 0,
+                "score_apprentissage": 0,
+                "next_review_date": "2026-02-28T17:16:39.981249",
+                "next_review_date_apprentissage": "2026-02-28T17:16:39.981253"
+            }
+        },
+        {
+            "id": "05db1202-76d2-4d0f-9339-d1ab08928a1a",
+            "category": "Au Restaurant & Phrases utiles",
+            "term_target": "Pronto",
+            "term_primary": "Prêt",
+            "srs_data": {
+                "score": 0,
+                "score_apprentissage": 0,
+                "next_review_date": "2026-02-28T17:16:39.981349",
+                "next_review_date_apprentissage": "2026-02-28T17:16:39.981352"
+            }
+        },
+        {
+            "id": "dab5e55e-6464-441e-9e20-3ad7ce30cc2a",
+            "category": "Au Restaurant & Phrases utiles",
+            "term_target": "Está bem",
+            "term_primary": "D'accord / C'est bien",
+            "srs_data": {
+                "score": 0,
+                "score_apprentissage": 0,
+                "next_review_date": "2026-02-28T17:16:39.981448",
+                "next_review_date_apprentissage": "2026-02-28T17:16:39.981451"
+            }
+        },
+        {
+            "id": "6e7d9a4b-94e4-4b38-9070-e600e1422d0d",
+            "category": "Au Restaurant & Phrases utiles",
+            "term_target": "A gente vê-se",
+            "term_primary": "On se revoit",
+            "srs_data": {
+                "score": 0,
+                "score_apprentissage": 0,
+                "next_review_date": "2026-02-28T17:16:39.981549",
+                "next_review_date_apprentissage": "2026-02-28T17:16:39.981552"
+            }
+        },
+        {
+            "id": "324ccd0b-deb1-4fc6-beff-32888095b088",
+            "category": "Au Restaurant & Phrases utiles",
+            "term_target": "Riem",
+            "term_primary": "Ils rient",
+            "srs_data": {
+                "score": 0,
+                "score_apprentissage": 0,
+                "next_review_date": "2026-02-28T17:16:39.981677",
+                "next_review_date_apprentissage": "2026-02-28T17:16:39.981681"
+            }
+        },
+        {
+            "id": "245910b0-6b51-46bb-a46b-0a6c7992ba51",
+            "category": "Au Restaurant & Phrases utiles",
+            "term_target": "Fomos passear",
+            "term_primary": "Nous sommes allés nous promener",
+            "srs_data": {
+                "score": 0,
+                "score_apprentissage": 0,
+                "next_review_date": "2026-02-28T17:16:39.981789",
+                "next_review_date_apprentissage": "2026-02-28T17:16:39.981792"
+            }
+        },
+        {
+            "id": "b2edd9a5-bc7f-44f5-b052-8df7b93048b7",
+            "category": "Au Restaurant & Phrases utiles",
+            "term_target": "Eu bebo sempre um copo de vinho branco",
+            "term_primary": "Je bois toujours un verre de vin blanc",
+            "srs_data": {
+                "score": 0,
+                "score_apprentissage": 0,
+                "next_review_date": "2026-02-28T17:16:39.981888",
+                "next_review_date_apprentissage": "2026-02-28T17:16:39.981891"
+            }
+        },
+        {
+            "id": "9b56563d-6a92-48a6-9cc4-92b50d15168d",
+            "category": "Au Restaurant & Phrases utiles",
+            "term_target": "O empregado é simpático e a conta é barata",
+            "term_primary": "L'employé est sympathique et l'addition n'est pas chère",
+            "srs_data": {
+                "score": 0,
+                "score_apprentissage": 0,
+                "next_review_date": "2026-02-28T17:16:39.981984",
+                "next_review_date_apprentissage": "2026-02-28T17:16:39.981987"
+            }
+        },
+        {
+            "id": "00e3d997-ca13-4a69-8190-1b26776d7cb7",
+            "category": "Nourriture, Ingrédients & Cuissons",
+            "term_target": "O pequeno-almoço",
+            "term_primary": "Le petit-déjeuner",
+            "srs_data": {
+                "score": 0,
+                "score_apprentissage": 0,
+                "next_review_date": "2026-02-28T17:16:59.471257",
+                "next_review_date_apprentissage": "2026-02-28T17:16:59.471265"
+            }
+        },
+        {
+            "id": "5ab34230-f34e-4396-a17f-75fcac467474",
+            "category": "Nourriture, Ingrédients & Cuissons",
+            "term_target": "O almoço",
+            "term_primary": "Le déjeuner",
+            "srs_data": {
+                "score": 0,
+                "score_apprentissage": 0,
+                "next_review_date": "2026-02-28T17:16:59.471414",
+                "next_review_date_apprentissage": "2026-02-28T17:16:59.471418"
+            }
+        },
+        {
+            "id": "b0ad1166-8e86-4cd3-9efc-facfe4454493",
+            "category": "Nourriture, Ingrédients & Cuissons",
+            "term_target": "O lanche",
+            "term_primary": "L'en-cas / La collation",
+            "srs_data": {
+                "score": 0,
+                "score_apprentissage": 0,
+                "next_review_date": "2026-02-28T17:16:59.471559",
+                "next_review_date_apprentissage": "2026-02-28T17:16:59.471563"
+            }
+        },
+        {
+            "id": "924ab3fb-2b14-44f6-a1cc-2c29fd69d86b",
+            "category": "Nourriture, Ingrédients & Cuissons",
+            "term_target": "O jantar",
+            "term_primary": "Le dîner",
+            "srs_data": {
+                "score": 0,
+                "score_apprentissage": 0,
+                "next_review_date": "2026-02-28T17:16:59.471721",
+                "next_review_date_apprentissage": "2026-02-28T17:16:59.471726"
+            }
+        },
+        {
+            "id": "8389814d-dea7-43ba-8e78-0ce1ddb344c7",
+            "category": "Nourriture, Ingrédients & Cuissons",
+            "term_target": "As entradas",
+            "term_primary": "Les entrées",
+            "srs_data": {
+                "score": 0,
+                "score_apprentissage": 0,
+                "next_review_date": "2026-02-28T17:16:59.471857",
+                "next_review_date_apprentissage": "2026-02-28T17:16:59.471861"
+            }
+        },
+        {
+            "id": "fccb7331-ef7b-4e27-a4f9-d9087c15d579",
+            "category": "Nourriture, Ingrédients & Cuissons",
+            "term_target": "Os pratos principais",
+            "term_primary": "Les plats principaux",
+            "srs_data": {
+                "score": 0,
+                "score_apprentissage": 0,
+                "next_review_date": "2026-02-28T17:16:59.471984",
+                "next_review_date_apprentissage": "2026-02-28T17:16:59.471988"
+            }
+        },
+        {
+            "id": "53f0a87a-7781-414d-9163-6ab3543b4b86",
+            "category": "Nourriture, Ingrédients & Cuissons",
+            "term_target": "O prato do dia",
+            "term_primary": "Le plat du jour",
+            "srs_data": {
+                "score": 0,
+                "score_apprentissage": 0,
+                "next_review_date": "2026-02-28T17:16:59.472109",
+                "next_review_date_apprentissage": "2026-02-28T17:16:59.472113"
+            }
+        },
+        {
+            "id": "a60e3b27-98f6-42ed-b316-16a382a29a45",
+            "category": "Nourriture, Ingrédients & Cuissons",
+            "term_target": "A sobremesa",
+            "term_primary": "Le dessert",
+            "srs_data": {
+                "score": 0,
+                "score_apprentissage": 0,
+                "next_review_date": "2026-02-28T17:16:59.472236",
+                "next_review_date_apprentissage": "2026-02-28T17:16:59.472240"
+            }
+        },
+        {
+            "id": "95d1da5c-1a32-4d5f-9cfb-f5be556a6258",
+            "category": "Nourriture, Ingrédients & Cuissons",
+            "term_target": "As bebidas",
+            "term_primary": "Les boissons",
+            "srs_data": {
+                "score": 0,
+                "score_apprentissage": 0,
+                "next_review_date": "2026-02-28T17:16:59.472364",
+                "next_review_date_apprentissage": "2026-02-28T17:16:59.472368"
+            }
+        },
+        {
+            "id": "62f170d0-7b91-4d37-a909-c611d84b5bb8",
+            "category": "Nourriture, Ingrédients & Cuissons",
+            "term_target": "As especialidades da casa",
+            "term_primary": "Les spécialités de la maison",
+            "srs_data": {
+                "score": 0,
+                "score_apprentissage": 0,
+                "next_review_date": "2026-02-28T17:16:59.472495",
+                "next_review_date_apprentissage": "2026-02-28T17:16:59.472499"
+            }
+        },
+        {
+            "id": "2e2f95db-8559-4335-93c3-3bd4c4f7390f",
+            "category": "Nourriture, Ingrédients & Cuissons",
+            "term_target": "Pratos vegetarianos",
+            "term_primary": "Plats végétariens",
+            "srs_data": {
+                "score": 0,
+                "score_apprentissage": 0,
+                "next_review_date": "2026-02-28T17:16:59.472619",
+                "next_review_date_apprentissage": "2026-02-28T17:16:59.472623"
+            }
+        },
+        {
+            "id": "d228d193-b4ec-41af-8891-35eab888d2e0",
+            "category": "Nourriture, Ingrédients & Cuissons",
+            "term_target": "A comida",
+            "term_primary": "La nourriture / La cuisine",
+            "srs_data": {
+                "score": 0,
+                "score_apprentissage": 0,
+                "next_review_date": "2026-02-28T17:16:59.472787",
+                "next_review_date_apprentissage": "2026-02-28T17:16:59.472792"
+            }
+        },
+        {
+            "id": "e8f7515f-7bea-4af0-ad65-aac993b9c4c1",
+            "category": "Nourriture, Ingrédients & Cuissons",
+            "term_target": "Qual é a sua comida favorita?",
+            "term_primary": "Quel est votre type de cuisine préféré ?",
+            "srs_data": {
+                "score": 0,
+                "score_apprentissage": 0,
+                "next_review_date": "2026-02-28T17:16:59.472916",
+                "next_review_date_apprentissage": "2026-02-28T17:16:59.472919"
+            }
+        },
+        {
+            "id": "2d5006cf-c0ab-42d2-973c-af6481c4283c",
+            "category": "Nourriture, Ingrédients & Cuissons",
+            "term_target": "A carne",
+            "term_primary": "La viande",
+            "srs_data": {
+                "score": 0,
+                "score_apprentissage": 0,
+                "next_review_date": "2026-02-28T17:16:59.473040",
+                "next_review_date_apprentissage": "2026-02-28T17:16:59.473044"
+            }
+        },
+        {
+            "id": "6a6b8b8a-1cb4-4648-8291-c149e469996a",
+            "category": "Nourriture, Ingrédients & Cuissons",
+            "term_target": "O peixe",
+            "term_primary": "Le poisson",
+            "srs_data": {
+                "score": 0,
+                "score_apprentissage": 0,
+                "next_review_date": "2026-02-28T17:16:59.473162",
+                "next_review_date_apprentissage": "2026-02-28T17:16:59.473166"
+            }
+        },
+        {
+            "id": "d0342699-0a7a-4422-89e9-7e698c8fd545",
+            "category": "Nourriture, Ingrédients & Cuissons",
+            "term_target": "As batatas",
+            "term_primary": "Les pommes de terre",
+            "srs_data": {
+                "score": 0,
+                "score_apprentissage": 0,
+                "next_review_date": "2026-02-28T17:16:59.473288",
+                "next_review_date_apprentissage": "2026-02-28T17:16:59.473292"
+            }
+        },
+        {
+            "id": "cd14eecc-14a4-4209-918c-3490671bbee8",
+            "category": "Nourriture, Ingrédients & Cuissons",
+            "term_target": "O arroz",
+            "term_primary": "Le riz",
+            "srs_data": {
+                "score": 0,
+                "score_apprentissage": 0,
+                "next_review_date": "2026-02-28T17:16:59.473412",
+                "next_review_date_apprentissage": "2026-02-28T17:16:59.473416"
+            }
+        },
+        {
+            "id": "a35d0998-a4b1-44e8-ab96-2a6f0fdda665",
+            "category": "Nourriture, Ingrédients & Cuissons",
+            "term_target": "A salada",
+            "term_primary": "La salade",
+            "srs_data": {
+                "score": 0,
+                "score_apprentissage": 0,
+                "next_review_date": "2026-02-28T17:16:59.473542",
+                "next_review_date_apprentissage": "2026-02-28T17:16:59.473547"
+            }
+        },
+        {
+            "id": "fcc50669-909f-474b-9d19-e8430359ea37",
+            "category": "Nourriture, Ingrédients & Cuissons",
+            "term_target": "A abóbora",
+            "term_primary": "La courge",
+            "srs_data": {
+                "score": 0,
+                "score_apprentissage": 0,
+                "next_review_date": "2026-02-28T17:16:59.473693",
+                "next_review_date_apprentissage": "2026-02-28T17:16:59.473697"
+            }
+        },
+        {
+            "id": "34aece54-da35-4f49-9eb7-d48c3250b3e2",
+            "category": "Nourriture, Ingrédients & Cuissons",
+            "term_target": "O pão",
+            "term_primary": "Le pain",
+            "srs_data": {
+                "score": 0,
+                "score_apprentissage": 0,
+                "next_review_date": "2026-02-28T17:16:59.473822",
+                "next_review_date_apprentissage": "2026-02-28T17:16:59.473826"
+            }
+        },
+        {
+            "id": "444db2fb-e93b-4d7e-b27b-52b19ccd6bb7",
+            "category": "Nourriture, Ingrédients & Cuissons",
+            "term_target": "O queijo",
+            "term_primary": "Le fromage",
+            "srs_data": {
+                "score": 0,
+                "score_apprentissage": 0,
+                "next_review_date": "2026-02-28T17:16:59.473959",
+                "next_review_date_apprentissage": "2026-02-28T17:16:59.473965"
+            }
+        },
+        {
+            "id": "8f62cac9-db34-4d8c-a1a6-33a557acfabf",
+            "category": "Nourriture, Ingrédients & Cuissons",
+            "term_target": "A manteiga",
+            "term_primary": "Le beurre",
+            "srs_data": {
+                "score": 0,
+                "score_apprentissage": 0,
+                "next_review_date": "2026-02-28T17:16:59.474132",
+                "next_review_date_apprentissage": "2026-02-28T17:16:59.474138"
+            }
+        },
+        {
+            "id": "dd6aa714-fd87-4bd1-be5e-ea8881ac511c",
+            "category": "Nourriture, Ingrédients & Cuissons",
+            "term_target": "A maionese",
+            "term_primary": "La mayonnaise",
+            "srs_data": {
+                "score": 0,
+                "score_apprentissage": 0,
+                "next_review_date": "2026-02-28T17:16:59.474313",
+                "next_review_date_apprentissage": "2026-02-28T17:16:59.474319"
+            }
+        },
+        {
+            "id": "10fe50a9-cf57-49a6-845f-a215cb45b6a3",
+            "category": "Nourriture, Ingrédients & Cuissons",
+            "term_target": "O leite",
+            "term_primary": "Le lait",
+            "srs_data": {
+                "score": 0,
+                "score_apprentissage": 0,
+                "next_review_date": "2026-02-28T17:16:59.474499",
+                "next_review_date_apprentissage": "2026-02-28T17:16:59.474505"
+            }
+        },
+        {
+            "id": "f6a6ec14-b562-4e56-b373-3fe9abbda2aa",
+            "category": "Nourriture, Ingrédients & Cuissons",
+            "term_target": "O açúcar",
+            "term_primary": "Le sucre",
+            "srs_data": {
+                "score": 0,
+                "score_apprentissage": 0,
+                "next_review_date": "2026-02-28T17:16:59.474722",
+                "next_review_date_apprentissage": "2026-02-28T17:16:59.474728"
+            }
+        },
+        {
+            "id": "44c3744c-8c05-4176-85a5-0e607191b61d",
+            "category": "Nourriture, Ingrédients & Cuissons",
+            "term_target": "A cebola",
+            "term_primary": "L'oignon",
+            "srs_data": {
+                "score": 0,
+                "score_apprentissage": 0,
+                "next_review_date": "2026-02-28T17:16:59.474992",
+                "next_review_date_apprentissage": "2026-02-28T17:16:59.475000"
+            }
+        },
+        {
+            "id": "ab123f46-48da-41ec-9c58-2a5ce152d868",
+            "category": "Nourriture, Ingrédients & Cuissons",
+            "term_target": "O alho",
+            "term_primary": "L'ail",
+            "srs_data": {
+                "score": 0,
+                "score_apprentissage": 0,
+                "next_review_date": "2026-02-28T17:16:59.475214",
+                "next_review_date_apprentissage": "2026-02-28T17:16:59.475221"
+            }
+        },
+        {
+            "id": "b67ef229-8268-4d13-bb1b-4c304f854e0e",
+            "category": "Nourriture, Ingrédients & Cuissons",
+            "term_target": "O molho",
+            "term_primary": "La sauce",
+            "srs_data": {
+                "score": 0,
+                "score_apprentissage": 0,
+                "next_review_date": "2026-02-28T17:16:59.475393",
+                "next_review_date_apprentissage": "2026-02-28T17:16:59.475398"
+            }
+        },
+        {
+            "id": "5de72667-7fd4-420a-a268-706391bc556c",
+            "category": "Nourriture, Ingrédients & Cuissons",
+            "term_target": "O óleo",
+            "term_primary": "L'huile",
+            "srs_data": {
+                "score": 0,
+                "score_apprentissage": 0,
+                "next_review_date": "2026-02-28T17:16:59.475570",
+                "next_review_date_apprentissage": "2026-02-28T17:16:59.475596"
+            }
+        },
+        {
+            "id": "eca3e733-85ea-459e-ad10-4a0fd18565cd",
+            "category": "Nourriture, Ingrédients & Cuissons",
+            "term_target": "O sal",
+            "term_primary": "Le sel",
+            "srs_data": {
+                "score": 0,
+                "score_apprentissage": 0,
+                "next_review_date": "2026-02-28T17:16:59.475840",
+                "next_review_date_apprentissage": "2026-02-28T17:16:59.475846"
+            }
+        },
+        {
+            "id": "35bc8000-7c67-4076-ac6d-05bb2f9beec4",
+            "category": "Nourriture, Ingrédients & Cuissons",
+            "term_target": "A pimenta",
+            "term_primary": "Le poivre",
+            "srs_data": {
+                "score": 0,
+                "score_apprentissage": 0,
+                "next_review_date": "2026-02-28T17:16:59.476030",
+                "next_review_date_apprentissage": "2026-02-28T17:16:59.476035"
+            }
+        },
+        {
+            "id": "5792b5ed-a39f-42cf-ac8c-2a9ae5eb994a",
+            "category": "Nourriture, Ingrédients & Cuissons",
+            "term_target": "O gelo",
+            "term_primary": "La glace (glaçons)",
+            "srs_data": {
+                "score": 0,
+                "score_apprentissage": 0,
+                "next_review_date": "2026-02-28T17:16:59.476190",
+                "next_review_date_apprentissage": "2026-02-28T17:16:59.476195"
+            }
+        },
+        {
+            "id": "1220bb50-6c68-4da5-9c37-8a7b13f1a5f7",
+            "category": "Nourriture, Ingrédients & Cuissons",
+            "term_target": "Um garfo",
+            "term_primary": "Une fourchette",
+            "srs_data": {
+                "score": 0,
+                "score_apprentissage": 0,
+                "next_review_date": "2026-02-28T17:16:59.476341",
+                "next_review_date_apprentissage": "2026-02-28T17:16:59.476346"
+            }
+        },
+        {
+            "id": "6c0168e8-908f-41fc-837f-6cbcb60bf4e6",
+            "category": "Nourriture, Ingrédients & Cuissons",
+            "term_target": "Uma faca",
+            "term_primary": "Un couteau",
+            "srs_data": {
+                "score": 0,
+                "score_apprentissage": 0,
+                "next_review_date": "2026-02-28T17:16:59.476494",
+                "next_review_date_apprentissage": "2026-02-28T17:16:59.476499"
+            }
+        },
+        {
+            "id": "b8c222d7-252c-4f15-a574-9937919e30bf",
+            "category": "Nourriture, Ingrédients & Cuissons",
+            "term_target": "Uma colher",
+            "term_primary": "Une cuillère",
+            "srs_data": {
+                "score": 0,
+                "score_apprentissage": 0,
+                "next_review_date": "2026-02-28T17:16:59.476635",
+                "next_review_date_apprentissage": "2026-02-28T17:16:59.476639"
+            }
+        },
+        {
+            "id": "60706661-a84d-4662-8d1b-ab319df015a0",
+            "category": "Nourriture, Ingrédients & Cuissons",
+            "term_target": "O prato",
+            "term_primary": "L'assiette",
+            "srs_data": {
+                "score": 0,
+                "score_apprentissage": 0,
+                "next_review_date": "2026-02-28T17:16:59.476813",
+                "next_review_date_apprentissage": "2026-02-28T17:16:59.476818"
+            }
+        },
+        {
+            "id": "9c26de4f-9bec-4194-bed0-837b4682e575",
+            "category": "Nourriture, Ingrédients & Cuissons",
+            "term_target": "O prato fundo",
+            "term_primary": "L'assiette creuse",
+            "srs_data": {
+                "score": 0,
+                "score_apprentissage": 0,
+                "next_review_date": "2026-02-28T17:16:59.476954",
+                "next_review_date_apprentissage": "2026-02-28T17:16:59.476959"
+            }
+        },
+        {
+            "id": "ffd25297-d3df-4895-95c6-a2ff1665c446",
+            "category": "Nourriture, Ingrédients & Cuissons",
+            "term_target": "O copo",
+            "term_primary": "Le verre",
+            "srs_data": {
+                "score": 0,
+                "score_apprentissage": 0,
+                "next_review_date": "2026-02-28T17:16:59.477091",
+                "next_review_date_apprentissage": "2026-02-28T17:16:59.477096"
+            }
+        },
+        {
+            "id": "d0c11d15-f494-49a2-997c-e929cfc23332",
+            "category": "Nourriture, Ingrédients & Cuissons",
+            "term_target": "O guardanapo",
+            "term_primary": "La serviette",
+            "srs_data": {
+                "score": 0,
+                "score_apprentissage": 0,
+                "next_review_date": "2026-02-28T17:16:59.477236",
+                "next_review_date_apprentissage": "2026-02-28T17:16:59.477241"
+            }
+        },
+        {
+            "id": "0c176d29-ecfa-4a7b-a330-e1051dbc9e68",
+            "category": "Nourriture, Ingrédients & Cuissons",
+            "term_target": "Grelhada",
+            "term_primary": "Grillée",
+            "srs_data": {
+                "score": 0,
+                "score_apprentissage": 0,
+                "next_review_date": "2026-02-28T17:16:59.477382",
+                "next_review_date_apprentissage": "2026-02-28T17:16:59.477386"
+            }
+        },
+        {
+            "id": "93c67802-61d8-4260-8bfd-8561125f7863",
+            "category": "Nourriture, Ingrédients & Cuissons",
+            "term_target": "Estufada",
+            "term_primary": "Braisée",
+            "srs_data": {
+                "score": 0,
+                "score_apprentissage": 0,
+                "next_review_date": "2026-02-28T17:16:59.477530",
+                "next_review_date_apprentissage": "2026-02-28T17:16:59.477534"
+            }
+        },
+        {
+            "id": "a82737c4-ca9c-4681-a53d-66cc73deb976",
+            "category": "Nourriture, Ingrédients & Cuissons",
+            "term_target": "Frita",
+            "term_primary": "Frite / Poêlée",
+            "srs_data": {
+                "score": 0,
+                "score_apprentissage": 0,
+                "next_review_date": "2026-02-28T17:16:59.477690",
+                "next_review_date_apprentissage": "2026-02-28T17:16:59.477695"
+            }
+        },
+        {
+            "id": "bb3c5ede-5de2-412e-a1f5-7d7c141bcf73",
+            "category": "Nourriture, Ingrédients & Cuissons",
+            "term_target": "Sem",
+            "term_primary": "Sans",
+            "srs_data": {
+                "score": 0,
+                "score_apprentissage": 0,
+                "next_review_date": "2026-02-28T17:16:59.477836",
+                "next_review_date_apprentissage": "2026-02-28T17:16:59.477840"
+            }
+        },
+        {
+            "id": "7de588ae-1a09-4ca4-9c04-0b335d527484",
+            "category": "Nourriture, Ingrédients & Cuissons",
+            "term_target": "Adoro",
+            "term_primary": "J'adore",
+            "srs_data": {
+                "score": 0,
+                "score_apprentissage": 0,
+                "next_review_date": "2026-02-28T17:16:59.477973",
+                "next_review_date_apprentissage": "2026-02-28T17:16:59.477977"
+            }
+        },
+        {
+            "id": "e6468f1f-0c94-4b48-8dc0-a39e36a4d847",
+            "category": "Nourriture, Ingrédients & Cuissons",
+            "term_target": "Detesto",
+            "term_primary": "Je déteste",
+            "srs_data": {
+                "score": 0,
+                "score_apprentissage": 0,
+                "next_review_date": "2026-02-28T17:16:59.478111",
+                "next_review_date_apprentissage": "2026-02-28T17:16:59.478116"
+            }
+        },
+        {
+            "id": "ef45b670-4f58-4033-bd56-4c01a7477366",
+            "category": "Nourriture, Ingrédients & Cuissons",
+            "term_target": "Que bom",
+            "term_primary": "C'est bon",
+            "srs_data": {
+                "score": 0,
+                "score_apprentissage": 0,
+                "next_review_date": "2026-02-28T17:16:59.478249",
+                "next_review_date_apprentissage": "2026-02-28T17:16:59.478254"
+            }
+        },
+        {
+            "id": "6996c10c-77ad-4e3a-bcaf-6a7280086fb5",
+            "category": "Nourriture, Ingrédients & Cuissons",
+            "term_target": "É delicioso",
+            "term_primary": "C'est délicieux",
+            "srs_data": {
+                "score": 0,
+                "score_apprentissage": 0,
+                "next_review_date": "2026-02-28T17:16:59.478393",
+                "next_review_date_apprentissage": "2026-02-28T17:16:59.478398"
+            }
+        },
+        {
+            "id": "692cc3c7-ec04-484c-bd25-f4a97740f2ea",
+            "category": "Nourriture, Ingrédients & Cuissons",
+            "term_target": "Está quente",
+            "term_primary": "C'est chaud",
+            "srs_data": {
+                "score": 0,
+                "score_apprentissage": 0,
+                "next_review_date": "2026-02-28T17:16:59.478541",
+                "next_review_date_apprentissage": "2026-02-28T17:16:59.478546"
+            }
+        },
+        {
+            "id": "6e9d3291-fc34-45c8-97b2-617bcee14b4d",
+            "category": "Nourriture, Ingrédients & Cuissons",
+            "term_target": "Está frio",
+            "term_primary": "C'est froid",
+            "srs_data": {
+                "score": 0,
+                "score_apprentissage": 0,
+                "next_review_date": "2026-02-28T17:16:59.478703",
+                "next_review_date_apprentissage": "2026-02-28T17:16:59.478708"
+            }
+        },
+        {
+            "id": "c5ffa10e-63a2-41eb-8138-e60da2f590cb",
+            "category": "Nourriture, Ingrédients & Cuissons",
+            "term_target": "Caro",
+            "term_primary": "Cher",
+            "srs_data": {
+                "score": 0,
+                "score_apprentissage": 0,
+                "next_review_date": "2026-02-28T17:16:59.478850",
+                "next_review_date_apprentissage": "2026-02-28T17:16:59.478855"
+            }
+        },
+        {
+            "id": "34708661-796e-4f1a-90ff-de7571372679",
+            "category": "Nourriture, Ingrédients & Cuissons",
+            "term_target": "Barato",
+            "term_primary": "Pas cher",
+            "srs_data": {
+                "score": 0,
+                "score_apprentissage": 0,
+                "next_review_date": "2026-02-28T17:16:59.478988",
+                "next_review_date_apprentissage": "2026-02-28T17:16:59.478992"
+            }
+        },
+        {
+            "id": "b0cfed66-7169-4370-a6b2-fe5fcc7cc1d1",
+            "category": "Nourriture, Ingrédients & Cuissons",
+            "term_target": "Provar",
+            "term_primary": "Tester / Essayer",
+            "srs_data": {
+                "score": 0,
+                "score_apprentissage": 0,
+                "next_review_date": "2026-02-28T17:16:59.479129",
+                "next_review_date_apprentissage": "2026-02-28T17:16:59.479133"
+            }
+        },
+        {
+            "id": "9c26699d-19f4-49ec-9e7c-f0eea3050e57",
+            "category": "Nourriture, Ingrédients & Cuissons",
+            "term_target": "Escolher",
+            "term_primary": "Choisir",
+            "srs_data": {
+                "score": 0,
+                "score_apprentissage": 0,
+                "next_review_date": "2026-02-28T17:16:59.479267",
+                "next_review_date_apprentissage": "2026-02-28T17:16:59.479271"
+            }
+        }
+    ]
 }
