@@ -15,8 +15,8 @@ from github import Github
 # --- CONFIGURATION ---
 st.set_page_config(page_title="LingoClone", page_icon="🦉", layout="centered")
 
-# --- CODE D'ACCÈS (À modifier ici) ---
-ACCESS_PIN = "0104" 
+# --- CODE D'ACCÈS (Récupéré depuis les Secrets Streamlit) ---
+ACCESS_PIN = st.secrets.get("MY_PIN", "1234")
 
 # --- INITIALISATION DE L'AUTHENTIFICATION ---
 if "authenticated" not in st.session_state:
@@ -32,27 +32,33 @@ if not st.session_state.authenticated:
                 border-radius: 20px;
                 background-color: #f8f9fa;
                 border: 2px solid #58CC02;
+                box-shadow: 0 4px 6px rgba(0,0,0,0.1);
             }
         </style>
     """, unsafe_allow_html=True)
     
     st.markdown('<div class="auth-container">', unsafe_allow_html=True)
     st.title("🦉 Bienvenue sur LingoClone")
-    st.write("Veuillez entrer votre code PIN à 4 chiffres pour accéder à vos révisions.")
+    st.write("Veuillez entrer votre code PIN pour accéder à vos révisions.")
     
     pin_input = st.text_input("Code PIN", type="password", max_chars=4, help="Entrez les 4 chiffres")
     
     if pin_input:
-        if pin_input == ACCESS_PIN:
+        if pin_input == str(ACCESS_PIN):
             st.session_state.authenticated = True
             st.success("Accès autorisé ! Chargement...")
             st.rerun()
         elif len(pin_input) == 4:
             st.error("Code PIN incorrect.")
     st.markdown('</div>', unsafe_allow_html=True)
-    st.stop() # Arrête l'exécution ici tant que l'utilisateur n'est pas authentifié
+    
+    # On arrête l'exécution du reste du script tant que l'utilisateur n'est pas connecté
+    st.stop()
 
-# --- RESTE DU CODE (S'exécute uniquement si authentifié) ---
+
+# =====================================================================
+# --- LE RESTE DU CODE S'EXÉCUTE UNIQUEMENT SI AUTHENTIFIÉ ---
+# =====================================================================
 
 # --- CSS RESPONSIVE POUR MOBILE ---
 st.markdown("""
@@ -82,7 +88,7 @@ def normalize_text(text):
     text = re.sub(r'[^\w\s]', ' ', text)
     return " ".join(text.split())
 
-# --- LOGIQUE BASE DE DONNÉES ---
+# --- LOGIQUE BASE DE DONNÉES (CLOUD & LOCAL) ---
 def load_db():
     if "GITHUB_TOKEN" in st.secrets and "REPO_NAME" in st.secrets:
         try:
@@ -90,14 +96,27 @@ def load_db():
             repo = g.get_repo(st.secrets["REPO_NAME"])
             file_content = repo.get_contents(DB_PATH)
             data = json.loads(file_content.decoded_content.decode("utf-8"))
+            if "vocabulary" in data:
+                for c in data["vocabulary"]:
+                    if "category" not in c: c["category"] = "Général"
+                    if "score" not in c["srs_data"]: c["srs_data"]["score"] = c["srs_data"].get("box_level", 0)
+                    if "score_apprentissage" not in c["srs_data"]: c["srs_data"]["score_apprentissage"] = 0
+                    if "next_review_date_apprentissage" not in c["srs_data"]: c["srs_data"]["next_review_date_apprentissage"] = c["srs_data"].get("next_review_date", datetime.now().isoformat())
             return data
         except Exception as e:
-            pass
+            pass # Si erreur cloud, on passe au chargement local
     
     if os.path.exists(DB_PATH):
         try:
             with open(DB_PATH, "r", encoding="utf-8") as f:
-                return json.load(f)
+                data = json.load(f)
+                if "vocabulary" in data:
+                    for c in data["vocabulary"]:
+                        if "category" not in c: c["category"] = "Général"
+                        if "score" not in c["srs_data"]: c["srs_data"]["score"] = c["srs_data"].get("box_level", 0)
+                        if "score_apprentissage" not in c["srs_data"]: c["srs_data"]["score_apprentissage"] = 0
+                        if "next_review_date_apprentissage" not in c["srs_data"]: c["srs_data"]["next_review_date_apprentissage"] = c["srs_data"].get("next_review_date", datetime.now().isoformat())
+                return data
         except:
             pass
     return {"vocabulary": []}
@@ -139,6 +158,10 @@ if "is_flipped" not in st.session_state: st.session_state.is_flipped = False
 if "has_failed" not in st.session_state: st.session_state.has_failed = False
 if "retry_counter" not in st.session_state: st.session_state.retry_counter = 0
 
+if "ex_type" not in st.session_state: st.session_state.ex_type = "flash"
+if "options" not in st.session_state: st.session_state.options = []
+if "pt_audio" not in st.session_state: st.session_state.pt_audio = None
+
 # Filtres par défaut
 ALL_CATEGORIES = sorted(list(set([c.get("category", "Général") for c in st.session_state.db["vocabulary"]])))
 if "multiselect_cats" not in st.session_state: st.session_state.multiselect_cats = ALL_CATEGORIES
@@ -161,6 +184,17 @@ def reset_exercise_state():
     st.session_state.has_failed = False
     st.session_state.retry_counter = 0
 
+def set_dont_know():
+    st.session_state.is_correct = False
+    st.session_state.has_failed = True
+    st.session_state.user_input_val = "[Je ne sais pas]"
+    st.session_state.answer_checked = True
+
+def retry_oral():
+    st.session_state.answer_checked = False
+    st.session_state.retry_counter += 1
+    st.session_state.user_input_val = ""
+
 def quit_session():
     st.session_state.play_queue = []
     st.session_state.current_step = 0
@@ -170,14 +204,18 @@ def generate_session(mode_type, current_mode):
     st.session_state.session_mode = mode_type
     st.session_state.active_direction = st.session_state.direction_choice
     st.session_state.active_exo = st.session_state.exo_choice
+    
     all_cards = st.session_state.db["vocabulary"]
     valid_cards = [c for c in all_cards if c.get("category", "Général") in st.session_state.multiselect_cats]
+    
     if mode_type == "srs":
         now = datetime.now()
         key = "next_review_date_apprentissage" if current_mode == "Apprentissage (Quizlet)" else "next_review_date"
         valid_cards = [c for c in valid_cards if now >= datetime.fromisoformat(c["srs_data"].get(key, now.isoformat()))]
+    
     if not valid_cards: return
     random.shuffle(valid_cards)
+    
     st.session_state.play_queue = [random.choice(valid_cards)] if mode_type == "infini" else valid_cards[:st.session_state.nb_mots_limit]
     st.session_state.current_step = 0
     reset_exercise_state()
@@ -188,132 +226,235 @@ def next_question(card_id, success, current_mode):
         if card["id"] == card_id:
             s_key = "score_apprentissage" if current_mode == "Apprentissage (Quizlet)" else "score"
             d_key = "next_review_date_apprentissage" if current_mode == "Apprentissage (Quizlet)" else "next_review_date"
+            
             card["srs_data"][s_key] = card["srs_data"].get(s_key, 0) + (1 if success else -1)
             score = card["srs_data"][s_key]
+            
+            # Algorithme de répétition espacée
             days = {0:0, 1:1, 2:3, 3:7, 4:14}.get(score, 30 if score > 0 else 0)
             card["srs_data"][d_key] = (datetime.now() + timedelta(days=days)).isoformat()
             break
     save_db(db)
+    
     if st.session_state.session_mode == "infini":
         valid = [c for c in db["vocabulary"] if c.get("category", "Général") in st.session_state.multiselect_cats]
         if valid: st.session_state.play_queue.append(random.choice(valid))
+        
     st.session_state.current_step += 1
     reset_exercise_state()
 
 # --- BARRE LATÉRALE ---
 st.sidebar.title("🦉 LingoClone")
-if "GITHUB_TOKEN" in st.secrets:
+
+# Bouton de sauvegarde Cloud (Seulement si GitHub configuré)
+if "GITHUB_TOKEN" in st.secrets and "REPO_NAME" in st.secrets:
     if st.sidebar.button("☁️ Sauvegarder ma progression", type="primary", use_container_width=True):
         try:
-            g = Github(st.secrets["GITHUB_TOKEN"])
-            repo = g.get_repo(st.secrets["REPO_NAME"])
-            contents = repo.get_contents(DB_PATH)
-            repo.update_file(contents.path, "Sync LingoClone", json.dumps(st.session_state.db, indent=4, ensure_ascii=False), contents.sha)
-            st.sidebar.success("Synchronisé !")
-        except: st.sidebar.error("Erreur Sync")
+            with st.spinner("Sauvegarde sur le cloud en cours..."):
+                g = Github(st.secrets["GITHUB_TOKEN"])
+                repo = g.get_repo(st.secrets["REPO_NAME"])
+                try:
+                    contents = repo.get_contents(DB_PATH)
+                    repo.update_file(contents.path, "Mise à jour progression LingoClone", json.dumps(st.session_state.db, indent=4, ensure_ascii=False), contents.sha)
+                except:
+                    repo.create_file(DB_PATH, "Création base de données", json.dumps(st.session_state.db, indent=4, ensure_ascii=False))
+            st.sidebar.success("Progression sauvegardée ! ✅")
+        except Exception as e:
+            st.sidebar.error("Erreur de sauvegarde. Vérifiez vos clés GitHub.")
 
 st.sidebar.divider()
 menu = st.sidebar.radio("Navigation", ["Apprentissage (Quizlet)", "Entraînement (Quiz)", "Expression Orale 🎙️", "Dictionnaires 📖", "Bibliothèque", "Paramètres"])
 
-if menu in ["Apprentissage (Quizlet)", "Entraînement (Quiz)", "Expression Orale 🎙️"] and st.session_state.play_queue:
-    st.sidebar.button("🛑 Quitter", on_click=quit_session, use_container_width=True)
+if menu in ["Apprentissage (Quizlet)", "Entraînement (Quiz)", "Expression Orale 🎙️"] and len(st.session_state.play_queue) > 0 and st.session_state.current_step < len(st.session_state.play_queue):
+    st.sidebar.divider()
+    st.sidebar.button("🛑 Quitter la session", on_click=quit_session, use_container_width=True, type="primary")
 
 # --- PAGES ---
 if menu == "Paramètres":
     st.header("⚙️ Configuration")
-    list_name = st.text_input("Nom de la liste", value="Général")
-    uploaded_file = st.file_uploader("Importer Excel", type=["xlsx"])
+    list_name = st.text_input("Nom de la liste / Catégorie", value="Général")
+    uploaded_file = st.file_uploader("Importer Excel (Col 1: PT, Col 2: FR)", type=["xlsx"])
+    
     if uploaded_file:
         df = pd.read_excel(uploaded_file)
+        added = 0
         for _, row in df.iterrows():
-            if not pd.isna(row.iloc[0]) and not any(i['term_target'] == str(row.iloc[0]) for i in st.session_state.db["vocabulary"]):
-                st.session_state.db["vocabulary"].append({"id": str(uuid.uuid4()), "category": list_name.strip(), "term_target": str(row.iloc[0]).strip(), "term_primary": str(row.iloc[1]).strip(), "srs_data": {"score": 0, "score_apprentissage": 0, "next_review_date": datetime.now().isoformat(), "next_review_date_apprentissage": datetime.now().isoformat()}})
+            if not pd.isna(row.iloc[0]) and not pd.isna(row.iloc[1]):
+                target_word = str(row.iloc[0]).strip()
+                primary_word = str(row.iloc[1]).strip()
+                if target_word and primary_word and not any(i['term_target'] == target_word for i in st.session_state.db["vocabulary"]):
+                    st.session_state.db["vocabulary"].append({
+                        "id": str(uuid.uuid4()), "category": list_name.strip(), 
+                        "term_target": target_word, "term_primary": primary_word, 
+                        "srs_data": {"score": 0, "score_apprentissage": 0, "next_review_date": datetime.now().isoformat(), "next_review_date_apprentissage": datetime.now().isoformat()}
+                    })
+                    added += 1
         save_db(st.session_state.db)
-        st.success("Importé !")
-    if st.button("🗑️ Vider la base"): st.session_state.db = {"vocabulary": []}; save_db(st.session_state.db); st.rerun()
+        st.success(f"✅ {added} mots importés dans '{list_name}' !")
+        st.rerun()
+
+    st.divider()
+    if st.button("🔄 Forcer une révision (Tout réinitialiser à maintenant)"):
+        for c in st.session_state.db["vocabulary"]:
+            c["srs_data"]["next_review_date"] = datetime.now().isoformat()
+            c["srs_data"]["next_review_date_apprentissage"] = datetime.now().isoformat()
+        save_db(st.session_state.db)
+        quit_session()
+        st.success("Dates réinitialisées !")
+
+    if st.button("🗑️ Vider TOUTE la base de données", type="secondary"): 
+        st.session_state.db = {"vocabulary": []}; save_db(st.session_state.db); st.rerun()
 
 elif menu == "Dictionnaires 📖":
-    st.link_button("🌐 Ouvrir Lexilogos", "https://www.lexilogos.com/frances_lingua_dicionario.htm", use_container_width=True)
+    st.header("📖 Dictionnaires en ligne")
+    st.write("Ouvrez le dictionnaire complet pour vos recherches :")
+    st.markdown("<br>", unsafe_allow_html=True)
+    st.link_button("🌐 Ouvrir Lexilogos (Français ↔️ Portugais)", "https://www.lexilogos.com/frances_lingua_dicionario.htm", use_container_width=True)
 
 elif menu == "Bibliothèque":
-    st.header("📚 Bibliothèque")
+    st.header("📚 Liste de mots")
     if st.session_state.db["vocabulary"]:
-        st.dataframe(pd.DataFrame([{"Liste": c["category"], "Portugais": c["term_target"], "Français": c["term_primary"], "Score Quiz": c["srs_data"]["score"]} for c in st.session_state.db["vocabulary"]]), use_container_width=True)
+        st.dataframe(pd.DataFrame([{"Liste": c.get("category", "Général"), "Portugais": c["term_target"], "Français": c["term_primary"], "Score Quiz": c["srs_data"].get("score", 0)} for c in st.session_state.db["vocabulary"]]), use_container_width=True)
+    else:
+        st.info("Votre bibliothèque est vide.")
 
 elif menu in ["Apprentissage (Quizlet)", "Entraînement (Quiz)", "Expression Orale 🎙️"]:
-    if not st.session_state.play_queue or st.session_state.current_step >= len(st.session_state.play_queue):
-        st.title("Prêt à étudier ?")
+    
+    if len(st.session_state.play_queue) == 0 or st.session_state.current_step >= len(st.session_state.play_queue):
+        st.title("Prêt à étudier ? 🚀")
         with st.container(border=True):
             c1, c2 = st.columns(2)
             with c1:
-                st.button("Tout cocher", on_click=select_all_cats)
-                st.button("Tout décocher", on_click=deselect_all_cats)
-                st.multiselect("Listes", options=ALL_CATEGORIES, key="multiselect_cats")
-                valid_count = len([c for c in st.session_state.db["vocabulary"] if c["category"] in st.session_state.multiselect_cats])
-                st.number_input("Nombre de mots", min_value=1, max_value=max(1, valid_count), key="nb_mots_limit")
+                st.markdown("**📚 Listes à inclure :**")
+                btn_col1, btn_col2 = st.columns(2)
+                btn_col1.button("Tout cocher", on_click=select_all_cats, use_container_width=True)
+                btn_col2.button("Tout décocher", on_click=deselect_all_cats, use_container_width=True)
+                st.multiselect("Sélection", options=ALL_CATEGORIES, key="multiselect_cats", label_visibility="collapsed")
+                
+                valid_count = len([c for c in st.session_state.db["vocabulary"] if c.get("category", "Général") in st.session_state.multiselect_cats])
+                if st.session_state.nb_mots_limit > max(1, valid_count): st.session_state.nb_mots_limit = max(1, valid_count)
+                st.number_input(f"🔢 Limite de mots (Mode Libre)", min_value=1, max_value=max(1, valid_count), key="nb_mots_limit")
+            
             with c2:
-                if menu == "Expression Orale 🎙️": st.info("Français ➡️ Portugais (Oral)"); st.session_state.direction_choice = "Français ➡️ Portugais"
-                else: st.radio("Sens", ["Aléatoire", "Français ➡️ Portugais", "Portugais ➡️ Français"], key="direction_choice")
-                if menu == "Entraînement (Quiz)": st.radio("Type", ["Mixte", "Quiz Écrit", "QCM"], key="exo_choice")
-        if st.session_state.multiselect_cats:
-            col_a, col_b, col_c = st.columns(3)
-            col_a.button("LANCER (SRS)", on_click=generate_session, args=("srs", menu), type="primary")
-            col_b.button("LIBRE", on_click=generate_session, args=("libre", menu))
-            col_c.button("INFINI", on_click=generate_session, args=("infini", menu))
+                if menu == "Expression Orale 🎙️":
+                    st.info("🗣️ En mode Oral, vous traduisez du Français vers le Portugais.")
+                    st.session_state.direction_choice = "Français ➡️ Portugais"
+                else:
+                    st.radio("🔄 Sens", ["Aléatoire", "Français ➡️ Portugais", "Portugais ➡️ Français"], key="direction_choice")
+                if menu == "Entraînement (Quiz)":
+                    st.radio("📝 Type", ["Mixte", "Quiz Écrit", "QCM"], key="exo_choice")
+        
+        st.divider()
+        if not st.session_state.multiselect_cats: st.warning("⚠️ Sélectionnez au moins une liste.")
+        elif valid_count == 0: st.warning("⚠️ Les listes sélectionnées sont vides.")
+        else:
+            col_srs, col_libre, col_infini = st.columns(3)
+            with col_srs: st.button("LANCER (SRS) 📚", on_click=generate_session, args=("srs", menu), use_container_width=True, type="primary")
+            with col_libre: st.button("SÉRIE LIBRE 🎯", on_click=generate_session, args=("libre", menu), use_container_width=True)
+            with col_infini: st.button("MODE INFINI ♾️", on_click=generate_session, args=("infini", menu), use_container_width=True)
+
     else:
         card = st.session_state.play_queue[st.session_state.current_step]
+
         if not st.session_state.exercise_initialized:
             show_pt = st.session_state.active_direction == "Portugais ➡️ Français" if st.session_state.active_direction != "Aléatoire" else random.choice([True, False])
             st.session_state.current_question = card["term_target"] if show_pt else card["term_primary"]
             st.session_state.current_answer = card["term_primary"] if show_pt else card["term_target"]
-            st.session_state.pt_audio = get_audio_bytes(card["term_target"])
-            if menu == "Entraînement (Quiz)":
-                st.session_state.ex_type = random.choice(["ecrit", "qcm"]) if st.session_state.active_exo == "Mixte" else ("ecrit" if st.session_state.active_exo == "Quiz Écrit" else "qcm")
-                if st.session_state.ex_type == "qcm":
-                    others = [c["term_target"] if not show_pt else c["term_primary"] for c in st.session_state.db["vocabulary"] if c["id"] != card["id"]]
-                    st.session_state.options = random.sample(others, min(len(others), 3)) + [st.session_state.current_answer]
-                    random.shuffle(st.session_state.options)
+            st.session_state.pt_audio = get_audio_bytes(card["term_target"], lang='pt', tld='pt')
+
+            if st.session_state.active_exo == "Mixte": st.session_state.ex_type = random.choice(["ecrit", "qcm"])
+            elif st.session_state.active_exo == "Quiz Écrit": st.session_state.ex_type = "ecrit"
+            else: st.session_state.ex_type = "qcm"
+
+            if st.session_state.ex_type == "qcm" and menu == "Entraînement (Quiz)":
+                others = [c["term_primary"] if show_pt else c["term_target"] for c in st.session_state.db["vocabulary"] if c.get("category", "Général") in st.session_state.multiselect_cats and c["id"] != card["id"]]
+                st.session_state.options = random.sample(others, min(len(others), 3)) + [st.session_state.current_answer]
+                random.shuffle(st.session_state.options)
+
             st.session_state.exercise_initialized = True
 
-        if st.session_state.session_mode != "infini": st.progress(st.session_state.current_step / len(st.session_state.play_queue))
+        score_disp = card['srs_data'].get('score_apprentissage', 0) if menu == "Apprentissage (Quizlet)" else card['srs_data'].get('score', 0)
         
-        # RENDU DES MODES
+        if st.session_state.session_mode == "infini":
+            st.caption(f"🔥 **Infini** — Mot {st.session_state.current_step + 1} | Cat: {card.get('category', 'Général')} | Score: {score_disp}")
+        else:
+            st.progress(st.session_state.current_step / len(st.session_state.play_queue))
+            st.caption(f"Mot {st.session_state.current_step + 1} / {len(st.session_state.play_queue)} | Cat: {card.get('category', 'Général')} | Score: {score_disp}")
+        
+        # --- MODES DE JEU ---
         if menu == "Apprentissage (Quizlet)":
             txt = st.session_state.current_answer if st.session_state.is_flipped else st.session_state.current_question
-            st.markdown(f'<div class="flashcard" style="background-color:{"#f0f8ff" if st.session_state.is_flipped else "white"}; display:flex; align-items:center; justify-content:center; border-radius:15px; border:2px solid #e0e0e0; margin-bottom:20px;"><h1 style="text-align:center;">{txt}</h1></div>', unsafe_allow_html=True)
-            if st.session_state.pt_audio: st.audio(st.session_state.pt_audio)
+            st.markdown(f'<div class="flashcard" style="background-color:{"#f0f8ff" if st.session_state.is_flipped else "#ffffff"}; display:flex; align-items:center; justify-content:center; border-radius:15px; border:2px solid #e0e0e0; margin-bottom:20px;"><h1 style="color:#333; text-align:center; margin:0;">{txt}</h1></div>', unsafe_allow_html=True)
+            if st.session_state.pt_audio: st.audio(st.session_state.pt_audio, format="audio/mp3")
             if not st.session_state.is_flipped:
-                if st.button("🔄 Tourner"): st.session_state.is_flipped = True; st.rerun()
+                if st.button("🔄 Tourner", use_container_width=True): st.session_state.is_flipped = True; st.rerun()
             else:
                 c1, c2 = st.columns(2)
-                c1.button("❌ À revoir", on_click=next_question, args=(card["id"], False, menu))
-                c2.button("✅ Acquis", on_click=next_question, args=(card["id"], True, menu), type="primary")
+                c1.button("❌ À revoir", on_click=next_question, args=(card["id"], False, menu), use_container_width=True)
+                c2.button("✅ Acquis", on_click=next_question, args=(card["id"], True, menu), use_container_width=True, type="primary")
 
         elif menu == "Entraînement (Quiz)":
-            st.markdown(f'<div class="question-card" style="background-color:#f8f9fa; border-radius:15px; border-left:10px solid #58CC02; margin-bottom:20px;"><h2 class="question-title">{st.session_state.current_question}</h2></div>', unsafe_allow_html=True)
+            st.markdown(f'<div class="question-card" style="background-color:#f8f9fa; border-radius:15px; border-left:10px solid {DUOLINGO_GREEN}; margin-bottom:20px;"><p style="color:#666; margin:0; font-weight:bold;">Traduisez ceci :</p><h2 class="question-title" style="margin:0; color:#333;">{st.session_state.current_question}</h2></div>', unsafe_allow_html=True)
+            if card["term_target"] == st.session_state.current_question and st.session_state.pt_audio and not st.session_state.answer_checked: st.audio(st.session_state.pt_audio, format="audio/mp3")
+
             if not st.session_state.answer_checked:
                 if st.session_state.ex_type == "qcm":
                     for o in st.session_state.options:
-                        if st.button(o, use_container_width=True): st.session_state.is_correct = (o == st.session_state.current_answer); st.session_state.user_input_val = o; st.session_state.answer_checked = True; st.rerun()
+                        if st.button(o, use_container_width=True):
+                            st.session_state.is_correct = (o == st.session_state.current_answer)
+                            if not st.session_state.is_correct: st.session_state.has_failed = True
+                            st.session_state.user_input_val = o; st.session_state.answer_checked = True; st.rerun()
+                    st.markdown("<br>", unsafe_allow_html=True)
+                    if st.button("🤷 Je ne sais pas", use_container_width=True): set_dont_know(); st.rerun()
                 else:
-                    user_t = st.text_input("Traduction")
-                    if st.button("Vérifier"): st.session_state.is_correct = (normalize_text(user_t) == normalize_text(st.session_state.current_answer)); st.session_state.user_input_val = user_t; st.session_state.answer_checked = True; st.rerun()
-                if st.button("🤷 Je ne sais pas"): st.session_state.is_correct = False; st.session_state.user_input_val = "Inconnu"; st.session_state.answer_checked = True; st.rerun()
+                    user_t = st.text_input("Votre traduction").strip()
+                    c1, c2 = st.columns(2)
+                    with c1:
+                        if st.button("VÉRIFIER", use_container_width=True, type="primary"):
+                            if user_t:
+                                is_cor = (normalize_text(user_t) == normalize_text(st.session_state.current_answer))
+                                st.session_state.is_correct = is_cor
+                                if not is_cor: st.session_state.has_failed = True
+                                st.session_state.user_input_val = user_t; st.session_state.answer_checked = True; st.rerun()
+                            else: st.warning("Veuillez écrire une réponse.")
+                    with c2:
+                        if st.button("🤷 Je ne sais pas", use_container_width=True): set_dont_know(); st.rerun()
             else:
-                if st.session_state.is_correct: st.success(f"Bravo ! C'était {st.session_state.current_answer}")
-                else: st.error(f"Oups... C'était {st.session_state.current_answer}")
-                st.button("Continuer", on_click=next_question, args=(card["id"], st.session_state.is_correct, menu))
+                if st.session_state.is_correct:
+                    st.success(f"### 🎉 Correct !\n{st.session_state.current_answer}")
+                    if card["term_target"] == st.session_state.current_answer and st.session_state.pt_audio: st.audio(st.session_state.pt_audio)
+                    st.button("CONTINUER", on_click=next_question, args=(card["id"], not st.session_state.has_failed, menu), type="primary", use_container_width=True)
+                else:
+                    if st.session_state.user_input_val == "[Je ne sais pas]": st.info(f"### 💡 Réponse :\n{st.session_state.current_answer}")
+                    else: st.error(f"### ❌ Oups !\nVous avez répondu : *{st.session_state.user_input_val}*\nBonne réponse : **{st.session_state.current_answer}**")
+                    if card["term_target"] == st.session_state.current_answer and st.session_state.pt_audio: st.audio(st.session_state.pt_audio)
+                    st.button("CONTINUER", on_click=next_question, args=(card["id"], False, menu), type="primary", use_container_width=True)
 
         elif menu == "Expression Orale 🎙️":
-            st.markdown(f'<div class="question-card" style="background-color:#f8f9fa; border-left:10px solid #FF9600; margin-bottom:20px;"><h2 class="question-title">{st.session_state.current_question}</h2></div>', unsafe_allow_html=True)
+            st.markdown(f'<div class="question-card" style="background-color:#f8f9fa; border-radius:15px; border-left:10px solid {ORAL_ORANGE}; margin-bottom:20px;"><p style="color:#666; margin:0; font-weight:bold;">Traduisez à voix haute :</p><h2 class="question-title" style="margin:0; color:#333;">{st.session_state.current_question}</h2></div>', unsafe_allow_html=True)
             if not st.session_state.answer_checked:
-                audio = st.audio_input("Parlez")
-                if audio:
-                    voice_txt = recognize_speech_from_audio(audio)
-                    st.session_state.is_correct = (normalize_text(voice_txt) == normalize_text(st.session_state.current_answer))
-                    st.session_state.user_input_val = voice_txt; st.session_state.answer_checked = True; st.rerun()
+                audio_v = st.audio_input("Parlez ici", key=f"mic_{st.session_state.current_step}_{st.session_state.retry_counter}")
+                if audio_v:
+                    with st.spinner("Analyse..."):
+                        txt = recognize_speech_from_audio(audio_v)
+                        if not txt or txt.startswith("["): st.error(f"Mal entendu ({txt}). Répétez ?")
+                        else:
+                            st.session_state.user_input_val = txt
+                            is_cor = (normalize_text(txt) == normalize_text(st.session_state.current_answer))
+                            st.session_state.is_correct = is_cor
+                            if not is_cor: st.session_state.has_failed = True
+                            st.session_state.answer_checked = True; st.rerun()
+                st.markdown("<br>", unsafe_allow_html=True)
+                if st.button("🤷 Je ne sais pas", use_container_width=True): set_dont_know(); st.rerun()
             else:
-                if st.session_state.is_correct: st.success(f"Entendu : {st.session_state.user_input_val}")
-                else: st.error(f"J'ai entendu : {st.session_state.user_input_val}. Il fallait dire : {st.session_state.current_answer}")
-                if st.session_state.pt_audio: st.audio(st.session_state.pt_audio)
-                st.button("Continuer", on_click=next_question, args=(card["id"], st.session_state.is_correct, "Quiz"))
+                if st.session_state.is_correct:
+                    st.success(f"### 🎉 Parfait !\nJ'ai entendu : **{st.session_state.user_input_val}**")
+                    if st.session_state.pt_audio: st.audio(st.session_state.pt_audio)
+                    st.button("CONTINUER", on_click=next_question, args=(card["id"], not st.session_state.has_failed, "Entraînement (Quiz)"), type="primary", use_container_width=True)
+                else:
+                    if st.session_state.user_input_val == "[Je ne sais pas]": st.info(f"### 💡 Réponse :\n**{st.session_state.current_answer}**")
+                    else: st.error(f"### ❌ Presque !\nJ'ai entendu : *{st.session_state.user_input_val}*\nIl fallait dire : **{st.session_state.current_answer}**")
+                    if st.session_state.pt_audio: st.audio(st.session_state.pt_audio)
+                    c1, c2 = st.columns(2)
+                    c1.button("🔄 RÉESSAYER", on_click=retry_oral, use_container_width=True)
+                    c2.button("CONTINUER ➡️", on_click=next_question, args=(card["id"], False, "Entraînement (Quiz)"), type="primary", use_container_width=True)
