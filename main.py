@@ -1,5 +1,5 @@
 import streamlit as st
-import modules.database as database
+import database
 import modules.views as views
 
 
