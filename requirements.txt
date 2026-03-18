@@ -1,6 +1,6 @@
 streamlit
 pandas
-openpyxl
 gTTS
 SpeechRecognition
 PyGithub
+openpyxl
