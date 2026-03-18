@@ -4,7 +4,7 @@ import random
 import uuid
 from datetime import datetime, timedelta
 import modules.utils as utils
-import database
+import modules.database as database
 
 def render_home():
     st.title("🏠 Bienvenue sur LingoClone")
