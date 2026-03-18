@@ -7,9 +7,9 @@
             "term_primary": "Lundi",
             "srs_data": {
                 "score": 0,
-                "score_apprentissage": 0,
+                "score_apprentissage": 1,
                 "next_review_date": "2026-02-28T17:16:09.046360",
-                "next_review_date_apprentissage": "2026-02-28T17:16:09.046367"
+                "next_review_date_apprentissage": "2026-03-19T16:33:12.834092"
             }
         },
         {
@@ -19,9 +19,9 @@
             "term_primary": "Mardi",
             "srs_data": {
                 "score": 0,
-                "score_apprentissage": 0,
+                "score_apprentissage": -1,
                 "next_review_date": "2026-02-28T17:16:09.046495",
-                "next_review_date_apprentissage": "2026-02-28T17:16:09.046499"
+                "next_review_date_apprentissage": "2026-03-18T16:32:24.012706"
             }
         },
         {
@@ -151,9 +151,9 @@
             "term_primary": "Acheter",
             "srs_data": {
                 "score": 0,
-                "score_apprentissage": 1,
+                "score_apprentissage": 2,
                 "next_review_date": "2026-02-28T17:16:09.047818",
-                "next_review_date_apprentissage": "2026-03-01T17:23:20.511634"
+                "next_review_date_apprentissage": "2026-03-21T16:35:11.342317"
             }
         },
         {
@@ -211,9 +211,9 @@
             "term_primary": "Aller",
             "srs_data": {
                 "score": 0,
-                "score_apprentissage": 0,
+                "score_apprentissage": 1,
                 "next_review_date": "2026-02-28T17:16:09.048313",
-                "next_review_date_apprentissage": "2026-02-28T17:16:09.048316"
+                "next_review_date_apprentissage": "2026-03-19T16:32:09.128165"
             }
         },
         {
@@ -223,9 +223,9 @@
             "term_primary": "Nous sommes allés",
             "srs_data": {
                 "score": 0,
-                "score_apprentissage": 0,
+                "score_apprentissage": -1,
                 "next_review_date": "2026-02-28T17:16:09.048410",
-                "next_review_date_apprentissage": "2026-02-28T17:16:09.048413"
+                "next_review_date_apprentissage": "2026-03-18T16:35:48.341509"
             }
         },
         {
@@ -259,9 +259,9 @@
             "term_primary": "Chaque",
             "srs_data": {
                 "score": 0,
-                "score_apprentissage": 0,
+                "score_apprentissage": -1,
                 "next_review_date": "2026-02-28T17:16:09.048756",
-                "next_review_date_apprentissage": "2026-02-28T17:16:09.048760"
+                "next_review_date_apprentissage": "2026-03-18T16:34:35.022559"
             }
         },
         {
@@ -451,9 +451,9 @@
             "term_primary": "Que recommandez-vous ?",
             "srs_data": {
                 "score": 0,
-                "score_apprentissage": 0,
+                "score_apprentissage": -1,
                 "next_review_date": "2026-02-28T17:16:39.980297",
-                "next_review_date_apprentissage": "2026-02-28T17:16:39.980301"
+                "next_review_date_apprentissage": "2026-03-18T16:34:09.450192"
             }
         },
         {
@@ -547,9 +547,9 @@
             "term_primary": "Bon appétit",
             "srs_data": {
                 "score": 0,
-                "score_apprentissage": 0,
+                "score_apprentissage": 1,
                 "next_review_date": "2026-02-28T17:16:39.981139",
-                "next_review_date_apprentissage": "2026-02-28T17:16:39.981142"
+                "next_review_date_apprentissage": "2026-03-19T16:33:41.880673"
             }
         },
         {
@@ -583,9 +583,9 @@
             "term_primary": "D'accord / C'est bien",
             "srs_data": {
                 "score": 0,
-                "score_apprentissage": 0,
+                "score_apprentissage": 1,
                 "next_review_date": "2026-02-28T17:16:39.981448",
-                "next_review_date_apprentissage": "2026-02-28T17:16:39.981451"
+                "next_review_date_apprentissage": "2026-03-19T16:35:33.298920"
             }
         },
         {
@@ -751,9 +751,9 @@
             "term_primary": "Les boissons",
             "srs_data": {
                 "score": 0,
-                "score_apprentissage": 0,
+                "score_apprentissage": -1,
                 "next_review_date": "2026-02-28T17:16:59.472364",
-                "next_review_date_apprentissage": "2026-02-28T17:16:59.472368"
+                "next_review_date_apprentissage": "2026-03-18T16:32:36.548515"
             }
         },
         {
@@ -895,9 +895,9 @@
             "term_primary": "Le fromage",
             "srs_data": {
                 "score": 0,
-                "score_apprentissage": 0,
+                "score_apprentissage": 1,
                 "next_review_date": "2026-02-28T17:16:59.473959",
-                "next_review_date_apprentissage": "2026-02-28T17:16:59.473965"
+                "next_review_date_apprentissage": "2026-03-19T16:33:02.879284"
             }
         },
         {
@@ -907,9 +907,9 @@
             "term_primary": "Le beurre",
             "srs_data": {
                 "score": 0,
-                "score_apprentissage": 0,
+                "score_apprentissage": 1,
                 "next_review_date": "2026-02-28T17:16:59.474132",
-                "next_review_date_apprentissage": "2026-02-28T17:16:59.474138"
+                "next_review_date_apprentissage": "2026-03-19T16:34:40.916830"
             }
         },
         {
@@ -1051,9 +1051,9 @@
             "term_primary": "Un couteau",
             "srs_data": {
                 "score": 0,
-                "score_apprentissage": 0,
+                "score_apprentissage": -1,
                 "next_review_date": "2026-02-28T17:16:59.476494",
-                "next_review_date_apprentissage": "2026-02-28T17:16:59.476499"
+                "next_review_date_apprentissage": "2026-03-18T16:33:53.673233"
             }
         },
         {
@@ -1183,9 +1183,9 @@
             "term_primary": "Je déteste",
             "srs_data": {
                 "score": 0,
-                "score_apprentissage": 0,
+                "score_apprentissage": 1,
                 "next_review_date": "2026-02-28T17:16:59.478111",
-                "next_review_date_apprentissage": "2026-02-28T17:16:59.478116"
+                "next_review_date_apprentissage": "2026-03-19T16:34:01.266071"
             }
         },
         {
@@ -1279,9 +1279,9 @@
             "term_primary": "Choisir",
             "srs_data": {
                 "score": 0,
-                "score_apprentissage": 0,
+                "score_apprentissage": -1,
                 "next_review_date": "2026-02-28T17:16:59.479267",
-                "next_review_date_apprentissage": "2026-02-28T17:16:59.479271"
+                "next_review_date_apprentissage": "2026-03-18T16:33:34.272564"
             }
         },
         {
@@ -1303,9 +1303,9 @@
             "term_primary": "Vase",
             "srs_data": {
                 "score": 0,
-                "score_apprentissage": 0,
+                "score_apprentissage": 1,
                 "next_review_date": "2026-03-13T09:43:57.170622",
-                "next_review_date_apprentissage": "2026-03-13T09:43:57.170627"
+                "next_review_date_apprentissage": "2026-03-19T16:35:54.547446"
             }
         },
         {
@@ -1375,9 +1375,9 @@
             "term_primary": "Tapis",
             "srs_data": {
                 "score": 0,
-                "score_apprentissage": 0,
+                "score_apprentissage": 1,
                 "next_review_date": "2026-03-13T09:43:57.171545",
-                "next_review_date_apprentissage": "2026-03-13T09:43:57.171550"
+                "next_review_date_apprentissage": "2026-03-19T16:34:25.115620"
             }
         },
         {
@@ -1555,9 +1555,9 @@
             "term_primary": "Placard",
             "srs_data": {
                 "score": 0,
-                "score_apprentissage": 0,
+                "score_apprentissage": 1,
                 "next_review_date": "2026-03-13T09:46:45.566896",
-                "next_review_date_apprentissage": "2026-03-13T09:46:45.566900"
+                "next_review_date_apprentissage": "2026-03-19T16:32:45.683674"
             }
         },
         {
@@ -1579,9 +1579,9 @@
             "term_primary": "Bouilloire",
             "srs_data": {
                 "score": 0,
-                "score_apprentissage": 0,
+                "score_apprentissage": -1,
                 "next_review_date": "2026-03-13T09:46:45.567196",
-                "next_review_date_apprentissage": "2026-03-13T09:46:45.567199"
+                "next_review_date_apprentissage": "2026-03-18T16:35:05.349406"
             }
         },
         {
@@ -1627,9 +1627,9 @@
             "term_primary": "Assiettes",
             "srs_data": {
                 "score": 0,
-                "score_apprentissage": 0,
+                "score_apprentissage": 1,
                 "next_review_date": "2026-03-13T09:46:45.567757",
-                "next_review_date_apprentissage": "2026-03-13T09:46:45.567760"
+                "next_review_date_apprentissage": "2026-03-19T16:35:23.443731"
             }
         },
         {
@@ -1651,9 +1651,9 @@
             "term_primary": "Hotte aspirante",
             "srs_data": {
                 "score": 0,
-                "score_apprentissage": 0,
+                "score_apprentissage": -1,
                 "next_review_date": "2026-03-13T09:46:45.568169",
-                "next_review_date_apprentissage": "2026-03-13T09:46:45.568173"
+                "next_review_date_apprentissage": "2026-03-18T16:34:16.960534"
             }
         },
         {
@@ -1675,9 +1675,9 @@
             "term_primary": "Évier",
             "srs_data": {
                 "score": 0,
-                "score_apprentissage": 0,
+                "score_apprentissage": -1,
                 "next_review_date": "2026-03-13T09:46:45.568424",
-                "next_review_date_apprentissage": "2026-03-13T09:46:45.568434"
+                "next_review_date_apprentissage": "2026-03-18T16:35:17.450443"
             }
         },
         {
@@ -1711,9 +1711,9 @@
             "term_primary": "La fenêtre",
             "srs_data": {
                 "score": 0,
-                "score_apprentissage": 0,
+                "score_apprentissage": 1,
                 "next_review_date": "2026-03-13T09:46:45.569277",
-                "next_review_date_apprentissage": "2026-03-13T09:46:45.569280"
+                "next_review_date_apprentissage": "2026-03-19T16:32:16.809397"
             }
         },
         {
@@ -1759,9 +1759,9 @@
             "term_primary": "Poubelle",
             "srs_data": {
                 "score": 0,
-                "score_apprentissage": 0,
+                "score_apprentissage": 1,
                 "next_review_date": "2026-03-13T09:46:45.569816",
-                "next_review_date_apprentissage": "2026-03-13T09:46:45.569821"
+                "next_review_date_apprentissage": "2026-03-19T16:32:54.809453"
             }
         },
         {
@@ -1891,9 +1891,9 @@
             "term_primary": "Miroir",
             "srs_data": {
                 "score": 0,
-                "score_apprentissage": 0,
+                "score_apprentissage": -1,
                 "next_review_date": "2026-03-13T09:49:24.081562",
-                "next_review_date_apprentissage": "2026-03-13T09:49:24.081565"
+                "next_review_date_apprentissage": "2026-03-18T16:34:50.103463"
             }
         },
         {
@@ -1939,9 +1939,9 @@
             "term_primary": "Chasse d'eau",
             "srs_data": {
                 "score": 0,
-                "score_apprentissage": 0,
+                "score_apprentissage": -1,
                 "next_review_date": "2026-03-13T09:49:24.082075",
-                "next_review_date_apprentissage": "2026-03-13T09:49:24.082083"
+                "next_review_date_apprentissage": "2026-03-18T16:33:22.959674"
             }
         },
         {
