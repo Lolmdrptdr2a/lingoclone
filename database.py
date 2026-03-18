@@ -1,7 +1,7 @@
 import streamlit as st
 import json
 import os
-#from github import Github, Auth
+from github import Github, Auth
 from datetime import datetime
 
 VOCAB_DB_PATH = "vocab_db.json"
