@@ -1,0 +1,107 @@
+{
+  "verbs": [
+    { "infinitive": "falar", "fr": "parler", "type": "regular", "group": "AR" },
+    { "infinitive": "andar", "fr": "marcher", "type": "regular", "group": "AR" },
+    { "infinitive": "trabalhar", "fr": "travailler", "type": "regular", "group": "AR" },
+    { "infinitive": "estudar", "fr": "étudier", "type": "regular", "group": "AR" },
+    { "infinitive": "comprar", "fr": "acheter", "type": "regular", "group": "AR" },
+    { "infinitive": "ajudar", "fr": "aider", "type": "regular", "group": "AR" },
+    { "infinitive": "gostar", "fr": "aimer/apprécier", "type": "regular", "group": "AR" },
+    { "infinitive": "precisar", "fr": "avoir besoin", "type": "regular", "group": "AR" },
+    { "infinitive": "chamar", "fr": "appeler", "type": "regular", "group": "AR" },
+    { "infinitive": "esperar", "fr": "attendre/espérer", "type": "regular", "group": "AR" },
+    
+    { "infinitive": "comer", "fr": "manger", "type": "regular", "group": "ER" },
+    { "infinitive": "beber", "fr": "boire", "type": "regular", "group": "ER" },
+    { "infinitive": "viver", "fr": "vivre", "type": "regular", "group": "ER" },
+    { "infinitive": "escrever", "fr": "écrire", "type": "regular", "group": "ER" },
+    { "infinitive": "correr", "fr": "courir", "type": "regular", "group": "ER" },
+    { "infinitive": "aprender", "fr": "apprendre", "type": "regular", "group": "ER" },
+    { "infinitive": "entender", "fr": "comprendre", "type": "regular", "group": "ER" },
+    { "infinitive": "vender", "fr": "vendre", "type": "regular", "group": "ER" },
+    { "infinitive": "responder", "fr": "répondre", "type": "regular", "group": "ER" },
+    { "infinitive": "esquecer", "fr": "oublier", "type": "regular", "group": "ER" },
+    
+    { "infinitive": "partir", "fr": "partir", "type": "regular", "group": "IR" },
+    { "infinitive": "abrir", "fr": "ouvrir", "type": "regular", "group": "IR" },
+    { "infinitive": "dividir", "fr": "diviser", "type": "regular", "group": "IR" },
+    { "infinitive": "decidir", "fr": "décider", "type": "regular", "group": "IR" },
+    { "infinitive": "assistir", "fr": "assister/regarder", "type": "regular", "group": "IR" },
+
+    {
+      "infinitive": "ser",
+      "fr": "être (définitif)",
+      "type": "irregular",
+      "conjugations": {
+        "presente": ["sou", "és", "é", "somos", "são"],
+        "preterito_perfeito": ["fui", "foste", "foi", "fomos", "foram"],
+        "preterito_imperfeito": ["era", "eras", "era", "éramos", "eram"],
+        "futuro": ["serei", "serás", "será", "seremos", "serão"],
+        "condicional": ["seria", "serias", "seria", "seríamos", "seriam"],
+        "subjuntivo_presente": ["seja", "sejas", "seja", "sejamos", "sejam"],
+        "subjuntivo_imperfeito": ["fosse", "fosses", "fosse", "fôssemos", "fossem"],
+        "subjuntivo_futuro": ["for", "fores", "for", "formos", "forem"]
+      }
+    },
+    {
+      "infinitive": "estar",
+      "fr": "être (temporaire)",
+      "type": "irregular",
+      "conjugations": {
+        "presente": ["estou", "estás", "está", "estamos", "estão"],
+        "preterito_perfeito": ["estive", "estiveste", "esteve", "estivemos", "estiveram"],
+        "preterito_imperfeito": ["estava", "estavas", "estava", "estávamos", "estavam"],
+        "futuro": ["estarei", "estarás", "estará", "estaremos", "estarão"],
+        "condicional": ["estaria", "estarias", "estaria", "estaríamos", "estariam"],
+        "subjuntivo_presente": ["esteja", "estejas", "esteja", "estejamos", "estejam"],
+        "subjuntivo_imperfeito": ["estivesse", "estivesses", "estivesse", "estivéssemos", "estivessem"],
+        "subjuntivo_futuro": ["estiver", "estiveres", "estiver", "estivermos", "estiverem"]
+      }
+    },
+    {
+      "infinitive": "ter",
+      "fr": "avoir",
+      "type": "irregular",
+      "conjugations": {
+        "presente": ["tenho", "tens", "tem", "temos", "têm"],
+        "preterito_perfeito": ["tive", "tiveste", "teve", "tivemos", "tiveram"],
+        "preterito_imperfeito": ["tinha", "tinhas", "tinha", "tínhamos", "tinham"],
+        "futuro": ["terei", "terás", "terá", "teremos", "terão"],
+        "condicional": ["teria", "terias", "teria", "teríamos", "teriam"],
+        "subjuntivo_presente": ["tenha", "tenhas", "tenha", "tenhamos", "tenham"],
+        "subjuntivo_imperfeito": ["tivesse", "tivesses", "tivesse", "tivéssemos", "tivessem"],
+        "subjuntivo_futuro": ["tiver", "tiveres", "tiver", "tivermos", "tiverem"]
+      }
+    },
+    {
+      "infinitive": "ir",
+      "fr": "aller",
+      "type": "irregular",
+      "conjugations": {
+        "presente": ["vou", "vais", "vai", "vamos", "vão"],
+        "preterito_perfeito": ["fui", "foste", "foi", "fomos", "foram"],
+        "preterito_imperfeito": ["ia", "ias", "ia", "íamos", "iam"],
+        "futuro": ["irei", "irás", "irá", "iremos", "irão"],
+        "condicional": ["iria", "irias", "iria", "iríamos", "iriam"],
+        "subjuntivo_presente": ["vá", "vás", "vá", "vamos", "vão"],
+        "subjuntivo_imperfeito": ["fosse", "fosses", "fosse", "fôssemos", "fossem"],
+        "subjuntivo_futuro": ["for", "fores", "for", "formos", "forem"]
+      }
+    },
+    {
+      "infinitive": "fazer",
+      "fr": "faire",
+      "type": "irregular",
+      "conjugations": {
+        "presente": ["faço", "fazes", "faz", "fazemos", "fazem"],
+        "preterito_perfeito": ["fiz", "fizeste", "fez", "fizemos", "fizeram"],
+        "preterito_imperfeito": ["fazia", "fazias", "fazia", "fazíamos", "faziam"],
+        "futuro": ["farei", "farás", "fará", "faremos", "farão"],
+        "condicional": ["faria", "farias", "faria", "faríamos", "fariam"],
+        "subjuntivo_presente": ["faça", "faças", "faça", "façamos", "façam"],
+        "subjuntivo_imperfeito": ["fizesse", "fizesses", "fizesse", "fizéssemos", "fizessem"],
+        "subjuntivo_futuro": ["fizer", "fizeres", "fizer", "fizermos", "fizerem"]
+      }
+    }
+  ]
+}
