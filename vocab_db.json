@@ -138,9 +138,9 @@
             "term_target": "Avisar",
             "term_primary": "Prévenir",
             "srs_data": {
-                "score": 0,
+                "score": -1,
                 "score_apprentissage": 0,
-                "next_review_date": "2026-02-28T17:16:09.047701",
+                "next_review_date": "2026-03-20T13:07:57.997994",
                 "next_review_date_apprentissage": "2026-02-28T17:16:09.047706"
             }
         },
@@ -210,9 +210,9 @@
             "term_target": "Ir",
             "term_primary": "Aller",
             "srs_data": {
-                "score": 0,
+                "score": 1,
                 "score_apprentissage": 1,
-                "next_review_date": "2026-02-28T17:16:09.048313",
+                "next_review_date": "2026-03-21T13:11:03.615096",
                 "next_review_date_apprentissage": "2026-03-19T16:32:09.128165"
             }
         },
@@ -366,9 +366,9 @@
             "term_target": "Traz a ementa",
             "term_primary": "Apporte le menu",
             "srs_data": {
-                "score": 0,
+                "score": -1,
                 "score_apprentissage": 0,
-                "next_review_date": "2026-02-28T17:16:39.979559",
+                "next_review_date": "2026-03-20T13:09:05.364367",
                 "next_review_date_apprentissage": "2026-02-28T17:16:39.979562"
             }
         },
@@ -654,9 +654,9 @@
             "term_target": "O pequeno-almoço",
             "term_primary": "Le petit-déjeuner",
             "srs_data": {
-                "score": 0,
+                "score": -1,
                 "score_apprentissage": 0,
-                "next_review_date": "2026-02-28T17:16:59.471257",
+                "next_review_date": "2026-03-20T13:10:28.110109",
                 "next_review_date_apprentissage": "2026-02-28T17:16:59.471265"
             }
         },
@@ -714,9 +714,9 @@
             "term_target": "Os pratos principais",
             "term_primary": "Les plats principaux",
             "srs_data": {
-                "score": 0,
+                "score": -1,
                 "score_apprentissage": 0,
-                "next_review_date": "2026-02-28T17:16:59.471984",
+                "next_review_date": "2026-03-20T13:12:22.276969",
                 "next_review_date_apprentissage": "2026-02-28T17:16:59.471988"
             }
         },
@@ -738,9 +738,9 @@
             "term_target": "A sobremesa",
             "term_primary": "Le dessert",
             "srs_data": {
-                "score": 0,
+                "score": -1,
                 "score_apprentissage": 0,
-                "next_review_date": "2026-02-28T17:16:59.472236",
+                "next_review_date": "2026-03-20T13:09:57.061381",
                 "next_review_date_apprentissage": "2026-02-28T17:16:59.472240"
             }
         },
@@ -906,9 +906,9 @@
             "term_target": "A manteiga",
             "term_primary": "Le beurre",
             "srs_data": {
-                "score": 0,
+                "score": -1,
                 "score_apprentissage": 1,
-                "next_review_date": "2026-02-28T17:16:59.474132",
+                "next_review_date": "2026-03-20T13:11:27.300585",
                 "next_review_date_apprentissage": "2026-03-19T16:34:40.916830"
             }
         },
@@ -918,9 +918,9 @@
             "term_target": "A maionese",
             "term_primary": "La mayonnaise",
             "srs_data": {
-                "score": 0,
+                "score": -1,
                 "score_apprentissage": -1,
-                "next_review_date": "2026-02-28T17:16:59.474313",
+                "next_review_date": "2026-03-20T13:08:27.092831",
                 "next_review_date_apprentissage": "2026-02-28T17:23:12.392039"
             }
         },
@@ -930,9 +930,9 @@
             "term_target": "O leite",
             "term_primary": "Le lait",
             "srs_data": {
-                "score": 0,
+                "score": -1,
                 "score_apprentissage": 1,
-                "next_review_date": "2026-02-28T17:16:59.474499",
+                "next_review_date": "2026-03-20T13:12:01.143759",
                 "next_review_date_apprentissage": "2026-03-01T17:22:56.733544"
             }
         },
@@ -1026,9 +1026,9 @@
             "term_target": "O gelo",
             "term_primary": "La glace (glaçons)",
             "srs_data": {
-                "score": 0,
+                "score": 1,
                 "score_apprentissage": 0,
-                "next_review_date": "2026-02-28T17:16:59.476190",
+                "next_review_date": "2026-03-21T13:11:41.306300",
                 "next_review_date_apprentissage": "2026-02-28T17:16:59.476195"
             }
         },
@@ -1050,9 +1050,9 @@
             "term_target": "Uma faca",
             "term_primary": "Un couteau",
             "srs_data": {
-                "score": 0,
+                "score": -1,
                 "score_apprentissage": -1,
-                "next_review_date": "2026-02-28T17:16:59.476494",
+                "next_review_date": "2026-03-20T13:08:53.300483",
                 "next_review_date_apprentissage": "2026-03-18T16:33:53.673233"
             }
         },
@@ -1146,9 +1146,9 @@
             "term_target": "Frita",
             "term_primary": "Frite / Poêlée",
             "srs_data": {
-                "score": 0,
+                "score": 1,
                 "score_apprentissage": 0,
-                "next_review_date": "2026-02-28T17:16:59.477690",
+                "next_review_date": "2026-03-21T13:09:19.500915",
                 "next_review_date_apprentissage": "2026-02-28T17:16:59.477695"
             }
         },
@@ -1218,9 +1218,9 @@
             "term_target": "Está quente",
             "term_primary": "C'est chaud",
             "srs_data": {
-                "score": 0,
+                "score": -1,
                 "score_apprentissage": 0,
-                "next_review_date": "2026-02-28T17:16:59.478541",
+                "next_review_date": "2026-03-20T13:10:55.227354",
                 "next_review_date_apprentissage": "2026-02-28T17:16:59.478546"
             }
         },
