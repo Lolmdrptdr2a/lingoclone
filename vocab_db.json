@@ -450,9 +450,9 @@
             "term_target": "O que recomenda?",
             "term_primary": "Que recommandez-vous ?",
             "srs_data": {
-                "score": 0,
+                "score": 1,
                 "score_apprentissage": -1,
-                "next_review_date": "2026-02-28T17:16:39.980297",
+                "next_review_date": "2026-03-21T07:27:32.578881",
                 "next_review_date_apprentissage": "2026-03-18T16:34:09.450192"
             }
         },
@@ -522,9 +522,9 @@
             "term_target": "Uma bica curta",
             "term_primary": "Un café court",
             "srs_data": {
-                "score": 0,
+                "score": 1,
                 "score_apprentissage": 0,
-                "next_review_date": "2026-02-28T17:16:39.980920",
+                "next_review_date": "2026-03-21T07:27:26.571964",
                 "next_review_date_apprentissage": "2026-02-28T17:16:39.980923"
             }
         },
@@ -582,9 +582,9 @@
             "term_target": "Está bem",
             "term_primary": "D'accord / C'est bien",
             "srs_data": {
-                "score": 0,
+                "score": 1,
                 "score_apprentissage": 1,
-                "next_review_date": "2026-02-28T17:16:39.981448",
+                "next_review_date": "2026-03-21T07:27:50.047165",
                 "next_review_date_apprentissage": "2026-03-19T16:35:33.298920"
             }
         },
@@ -594,9 +594,9 @@
             "term_target": "A gente vê-se",
             "term_primary": "On se revoit",
             "srs_data": {
-                "score": 0,
+                "score": 1,
                 "score_apprentissage": 0,
-                "next_review_date": "2026-02-28T17:16:39.981549",
+                "next_review_date": "2026-03-21T07:27:19.525898",
                 "next_review_date_apprentissage": "2026-02-28T17:16:39.981552"
             }
         },
@@ -978,9 +978,9 @@
             "term_target": "O molho",
             "term_primary": "La sauce",
             "srs_data": {
-                "score": 0,
+                "score": 1,
                 "score_apprentissage": 0,
-                "next_review_date": "2026-02-28T17:16:59.475393",
+                "next_review_date": "2026-03-21T07:26:24.183102",
                 "next_review_date_apprentissage": "2026-02-28T17:16:59.475398"
             }
         },
