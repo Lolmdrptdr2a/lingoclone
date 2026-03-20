@@ -54,9 +54,9 @@
             "term_target": "Sexta-feira",
             "term_primary": "Vendredi",
             "srs_data": {
-                "score": 0,
+                "score": 1,
                 "score_apprentissage": 0,
-                "next_review_date": "2026-02-28T17:16:09.046867",
+                "next_review_date": "2026-03-21T07:24:15.313950",
                 "next_review_date_apprentissage": "2026-02-28T17:16:09.046871"
             }
         },
@@ -90,9 +90,9 @@
             "term_target": "A sogra",
             "term_primary": "La belle-mère",
             "srs_data": {
-                "score": 0,
+                "score": 1,
                 "score_apprentissage": 0,
-                "next_review_date": "2026-02-28T17:16:09.047167",
+                "next_review_date": "2026-03-21T07:24:23.185569",
                 "next_review_date_apprentissage": "2026-02-28T17:16:09.047170"
             }
         },
@@ -270,9 +270,9 @@
             "term_target": "Uma vez",
             "term_primary": "Une fois",
             "srs_data": {
-                "score": 0,
+                "score": 1,
                 "score_apprentissage": -1,
-                "next_review_date": "2026-02-28T17:16:09.048861",
+                "next_review_date": "2026-03-21T07:24:04.296038",
                 "next_review_date_apprentissage": "2026-02-28T17:23:32.394536"
             }
         },
@@ -306,9 +306,9 @@
             "term_target": "O tecido",
             "term_primary": "Le tissu",
             "srs_data": {
-                "score": 0,
+                "score": 1,
                 "score_apprentissage": 0,
-                "next_review_date": "2026-02-28T17:16:09.049209",
+                "next_review_date": "2026-03-21T07:24:40.027720",
                 "next_review_date_apprentissage": "2026-02-28T17:16:09.049214"
             }
         },
@@ -330,9 +330,9 @@
             "term_target": "Decifrar o menu",
             "term_primary": "Déchiffrer le menu",
             "srs_data": {
-                "score": 0,
+                "score": 1,
                 "score_apprentissage": 0,
-                "next_review_date": "2026-02-28T17:16:39.979243",
+                "next_review_date": "2026-03-21T07:24:31.807075",
                 "next_review_date_apprentissage": "2026-02-28T17:16:39.979247"
             }
         },
@@ -378,9 +378,9 @@
             "term_target": "O cardápio / A ementa",
             "term_primary": "Le menu",
             "srs_data": {
-                "score": 0,
+                "score": 1,
                 "score_apprentissage": 0,
-                "next_review_date": "2026-02-28T17:16:39.979681",
+                "next_review_date": "2026-03-21T07:23:34.667650",
                 "next_review_date_apprentissage": "2026-02-28T17:16:39.979685"
             }
         },
@@ -570,9 +570,9 @@
             "term_target": "Pronto",
             "term_primary": "Prêt",
             "srs_data": {
-                "score": 0,
+                "score": 1,
                 "score_apprentissage": 0,
-                "next_review_date": "2026-02-28T17:16:39.981349",
+                "next_review_date": "2026-03-21T07:25:26.120751",
                 "next_review_date_apprentissage": "2026-02-28T17:16:39.981352"
             }
         },
@@ -882,9 +882,9 @@
             "term_target": "O pão",
             "term_primary": "Le pain",
             "srs_data": {
-                "score": 0,
+                "score": 1,
                 "score_apprentissage": 0,
-                "next_review_date": "2026-02-28T17:16:59.473822",
+                "next_review_date": "2026-03-21T07:24:18.905272",
                 "next_review_date_apprentissage": "2026-02-28T17:16:59.473826"
             }
         },
@@ -990,9 +990,9 @@
             "term_target": "O óleo",
             "term_primary": "L'huile",
             "srs_data": {
-                "score": 0,
+                "score": 1,
                 "score_apprentissage": 0,
-                "next_review_date": "2026-02-28T17:16:59.475570",
+                "next_review_date": "2026-03-21T07:25:00.686151",
                 "next_review_date_apprentissage": "2026-02-28T17:16:59.475596"
             }
         },
@@ -1002,9 +1002,9 @@
             "term_target": "O sal",
             "term_primary": "Le sel",
             "srs_data": {
-                "score": 0,
+                "score": 1,
                 "score_apprentissage": 0,
-                "next_review_date": "2026-02-28T17:16:59.475840",
+                "next_review_date": "2026-03-21T07:23:25.523911",
                 "next_review_date_apprentissage": "2026-02-28T17:16:59.475846"
             }
         },
@@ -1458,9 +1458,9 @@
             "term_target": "Almofadas",
             "term_primary": "Coussins",
             "srs_data": {
-                "score": 0,
+                "score": 1,
                 "score_apprentissage": 0,
-                "next_review_date": "2026-03-13T09:45:43.200154",
+                "next_review_date": "2026-03-21T07:23:20.861513",
                 "next_review_date_apprentissage": "2026-03-13T09:45:43.200157"
             }
         },
@@ -1518,9 +1518,9 @@
             "term_target": "Cortina",
             "term_primary": "Rideau",
             "srs_data": {
-                "score": 0,
+                "score": 1,
                 "score_apprentissage": 0,
-                "next_review_date": "2026-03-13T09:45:43.200833",
+                "next_review_date": "2026-03-21T07:24:47.909878",
                 "next_review_date_apprentissage": "2026-03-13T09:45:43.200836"
             }
         },
@@ -1566,9 +1566,9 @@
             "term_target": "Cafeteira",
             "term_primary": "Cafetière",
             "srs_data": {
-                "score": 0,
+                "score": 1,
                 "score_apprentissage": 0,
-                "next_review_date": "2026-03-13T09:46:45.567049",
+                "next_review_date": "2026-03-21T07:25:12.569226",
                 "next_review_date_apprentissage": "2026-03-13T09:46:45.567053"
             }
         },
@@ -1590,9 +1590,9 @@
             "term_target": "Torradeira",
             "term_primary": "Grille-pain",
             "srs_data": {
-                "score": 0,
+                "score": 1,
                 "score_apprentissage": 0,
-                "next_review_date": "2026-03-13T09:46:45.567321",
+                "next_review_date": "2026-03-21T07:23:58.124761",
                 "next_review_date_apprentissage": "2026-03-13T09:46:45.567324"
             }
         },
@@ -1698,9 +1698,9 @@
             "term_target": "Prateleira",
             "term_primary": "Étagère",
             "srs_data": {
-                "score": 0,
+                "score": 1,
                 "score_apprentissage": 0,
-                "next_review_date": "2026-03-13T09:46:45.569146",
+                "next_review_date": "2026-03-21T07:23:44.915313",
                 "next_review_date_apprentissage": "2026-03-13T09:46:45.569151"
             }
         },
@@ -1746,9 +1746,9 @@
             "term_target": "Unidade central",
             "term_primary": "Unité centrale (ordinateur)",
             "srs_data": {
-                "score": 0,
+                "score": 1,
                 "score_apprentissage": 0,
-                "next_review_date": "2026-03-13T09:46:45.569699",
+                "next_review_date": "2026-03-21T07:23:49.074372",
                 "next_review_date_apprentissage": "2026-03-13T09:46:45.569702"
             }
         },
@@ -1866,9 +1866,9 @@
             "term_target": "Cómoda",
             "term_primary": "Commode",
             "srs_data": {
-                "score": 0,
+                "score": 1,
                 "score_apprentissage": 0,
-                "next_review_date": "2026-03-13T09:49:24.081317",
+                "next_review_date": "2026-03-21T07:25:20.453320",
                 "next_review_date_apprentissage": "2026-03-13T09:49:24.081319"
             }
         },
@@ -1878,9 +1878,9 @@
             "term_target": "Gaveta",
             "term_primary": "Tiroir",
             "srs_data": {
-                "score": 0,
+                "score": 1,
                 "score_apprentissage": 0,
-                "next_review_date": "2026-03-13T09:49:24.081425",
+                "next_review_date": "2026-03-21T07:24:09.015440",
                 "next_review_date_apprentissage": "2026-03-13T09:49:24.081428"
             }
         },
@@ -1926,9 +1926,9 @@
             "term_target": "Móvel",
             "term_primary": "Meuble",
             "srs_data": {
-                "score": 0,
+                "score": 1,
                 "score_apprentissage": 0,
-                "next_review_date": "2026-03-13T09:49:24.081970",
+                "next_review_date": "2026-03-21T07:24:27.632775",
                 "next_review_date_apprentissage": "2026-03-13T09:49:24.081973"
             }
         },
@@ -1986,9 +1986,9 @@
             "term_target": "Banheira",
             "term_primary": "Baignoire",
             "srs_data": {
-                "score": 0,
+                "score": 1,
                 "score_apprentissage": 0,
-                "next_review_date": "2026-03-13T09:49:24.082607",
+                "next_review_date": "2026-03-21T07:24:54.079352",
                 "next_review_date_apprentissage": "2026-03-13T09:49:24.082611"
             }
         },
