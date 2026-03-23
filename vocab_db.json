@@ -7,9 +7,9 @@
             "term_primary": "Lundi",
             "srs_data": {
                 "score": 0,
-                "score_apprentissage": 1,
+                "score_apprentissage": 2,
                 "next_review_date": "2026-02-28T17:16:09.046360",
-                "next_review_date_apprentissage": "2026-03-19T16:33:12.834092"
+                "next_review_date_apprentissage": "2026-03-26T08:49:26.698320"
             }
         },
         {
@@ -163,9 +163,9 @@
             "term_primary": "Coûter",
             "srs_data": {
                 "score": 0,
-                "score_apprentissage": 0,
+                "score_apprentissage": 1,
                 "next_review_date": "2026-02-28T17:16:09.047920",
-                "next_review_date_apprentissage": "2026-02-28T17:16:09.047923"
+                "next_review_date_apprentissage": "2026-03-24T08:43:29.591442"
             }
         },
         {
@@ -199,9 +199,9 @@
             "term_primary": "Trouver",
             "srs_data": {
                 "score": 0,
-                "score_apprentissage": 0,
+                "score_apprentissage": -1,
                 "next_review_date": "2026-02-28T17:16:09.048214",
-                "next_review_date_apprentissage": "2026-02-28T17:16:09.048218"
+                "next_review_date_apprentissage": "2026-03-23T08:41:59.888213"
             }
         },
         {
@@ -367,9 +367,9 @@
             "term_primary": "Apporte le menu",
             "srs_data": {
                 "score": -1,
-                "score_apprentissage": 0,
+                "score_apprentissage": -1,
                 "next_review_date": "2026-03-20T13:09:05.364367",
-                "next_review_date_apprentissage": "2026-02-28T17:16:39.979562"
+                "next_review_date_apprentissage": "2026-03-23T08:45:19.167837"
             }
         },
         {
@@ -487,9 +487,9 @@
             "term_primary": "Y a-t-il des fruits de mer ?",
             "srs_data": {
                 "score": 0,
-                "score_apprentissage": 0,
+                "score_apprentissage": -1,
                 "next_review_date": "2026-02-28T17:16:39.980589",
-                "next_review_date_apprentissage": "2026-02-28T17:16:39.980592"
+                "next_review_date_apprentissage": "2026-03-23T08:46:12.134788"
             }
         },
         {
@@ -535,9 +535,9 @@
             "term_primary": "As-tu faim ?",
             "srs_data": {
                 "score": 0,
-                "score_apprentissage": 0,
+                "score_apprentissage": -1,
                 "next_review_date": "2026-02-28T17:16:39.981034",
-                "next_review_date_apprentissage": "2026-02-28T17:16:39.981038"
+                "next_review_date_apprentissage": "2026-03-23T08:41:17.829056"
             }
         },
         {
@@ -547,9 +547,9 @@
             "term_primary": "Bon appétit",
             "srs_data": {
                 "score": 0,
-                "score_apprentissage": 1,
+                "score_apprentissage": 2,
                 "next_review_date": "2026-02-28T17:16:39.981139",
-                "next_review_date_apprentissage": "2026-03-19T16:33:41.880673"
+                "next_review_date_apprentissage": "2026-03-26T08:40:49.279156"
             }
         },
         {
@@ -583,9 +583,9 @@
             "term_primary": "D'accord / C'est bien",
             "srs_data": {
                 "score": 1,
-                "score_apprentissage": 1,
+                "score_apprentissage": 0,
                 "next_review_date": "2026-03-21T07:27:50.047165",
-                "next_review_date_apprentissage": "2026-03-19T16:35:33.298920"
+                "next_review_date_apprentissage": "2026-03-23T08:42:50.940645"
             }
         },
         {
@@ -643,9 +643,9 @@
             "term_primary": "L'employé est sympathique et l'addition n'est pas chère",
             "srs_data": {
                 "score": 0,
-                "score_apprentissage": 0,
+                "score_apprentissage": 1,
                 "next_review_date": "2026-02-28T17:16:39.981984",
-                "next_review_date_apprentissage": "2026-02-28T17:16:39.981987"
+                "next_review_date_apprentissage": "2026-03-24T08:41:52.339420"
             }
         },
         {
@@ -667,9 +667,9 @@
             "term_primary": "Le déjeuner",
             "srs_data": {
                 "score": 0,
-                "score_apprentissage": 0,
+                "score_apprentissage": 1,
                 "next_review_date": "2026-02-28T17:16:59.471414",
-                "next_review_date_apprentissage": "2026-02-28T17:16:59.471418"
+                "next_review_date_apprentissage": "2026-03-24T08:42:13.273163"
             }
         },
         {
@@ -703,9 +703,9 @@
             "term_primary": "Les entrées",
             "srs_data": {
                 "score": 0,
-                "score_apprentissage": 0,
+                "score_apprentissage": 1,
                 "next_review_date": "2026-02-28T17:16:59.471857",
-                "next_review_date_apprentissage": "2026-02-28T17:16:59.471861"
+                "next_review_date_apprentissage": "2026-03-24T08:46:21.110241"
             }
         },
         {
@@ -727,9 +727,9 @@
             "term_primary": "Le plat du jour",
             "srs_data": {
                 "score": 0,
-                "score_apprentissage": 0,
+                "score_apprentissage": 1,
                 "next_review_date": "2026-02-28T17:16:59.472109",
-                "next_review_date_apprentissage": "2026-02-28T17:16:59.472113"
+                "next_review_date_apprentissage": "2026-03-24T08:43:13.464202"
             }
         },
         {
@@ -739,9 +739,9 @@
             "term_primary": "Le dessert",
             "srs_data": {
                 "score": -1,
-                "score_apprentissage": 0,
+                "score_apprentissage": 1,
                 "next_review_date": "2026-03-20T13:09:57.061381",
-                "next_review_date_apprentissage": "2026-02-28T17:16:59.472240"
+                "next_review_date_apprentissage": "2026-03-24T08:44:28.890840"
             }
         },
         {
@@ -787,9 +787,9 @@
             "term_primary": "La nourriture / La cuisine",
             "srs_data": {
                 "score": 0,
-                "score_apprentissage": 0,
+                "score_apprentissage": -1,
                 "next_review_date": "2026-02-28T17:16:59.472787",
-                "next_review_date_apprentissage": "2026-02-28T17:16:59.472792"
+                "next_review_date_apprentissage": "2026-03-23T08:41:08.050358"
             }
         },
         {
@@ -847,9 +847,9 @@
             "term_primary": "Le riz",
             "srs_data": {
                 "score": 0,
-                "score_apprentissage": 0,
+                "score_apprentissage": 1,
                 "next_review_date": "2026-02-28T17:16:59.473412",
-                "next_review_date_apprentissage": "2026-02-28T17:16:59.473416"
+                "next_review_date_apprentissage": "2026-03-24T08:40:59.744586"
             }
         },
         {
@@ -883,9 +883,9 @@
             "term_primary": "Le pain",
             "srs_data": {
                 "score": 1,
-                "score_apprentissage": 0,
+                "score_apprentissage": 1,
                 "next_review_date": "2026-03-21T07:24:18.905272",
-                "next_review_date_apprentissage": "2026-02-28T17:16:59.473826"
+                "next_review_date_apprentissage": "2026-03-24T08:40:55.202528"
             }
         },
         {
@@ -979,9 +979,9 @@
             "term_primary": "La sauce",
             "srs_data": {
                 "score": 1,
-                "score_apprentissage": 0,
+                "score_apprentissage": -1,
                 "next_review_date": "2026-03-21T07:26:24.183102",
-                "next_review_date_apprentissage": "2026-02-28T17:16:59.475398"
+                "next_review_date_apprentissage": "2026-03-23T08:43:44.439259"
             }
         },
         {
@@ -1027,9 +1027,9 @@
             "term_primary": "La glace (glaçons)",
             "srs_data": {
                 "score": 1,
-                "score_apprentissage": 0,
+                "score_apprentissage": 1,
                 "next_review_date": "2026-03-21T13:11:41.306300",
-                "next_review_date_apprentissage": "2026-02-28T17:16:59.476195"
+                "next_review_date_apprentissage": "2026-03-24T08:44:50.363952"
             }
         },
         {
@@ -1099,9 +1099,9 @@
             "term_primary": "Le verre",
             "srs_data": {
                 "score": 0,
-                "score_apprentissage": 0,
+                "score_apprentissage": 1,
                 "next_review_date": "2026-02-28T17:16:59.477091",
-                "next_review_date_apprentissage": "2026-02-28T17:16:59.477096"
+                "next_review_date_apprentissage": "2026-03-24T08:46:40.103589"
             }
         },
         {
@@ -1111,9 +1111,9 @@
             "term_primary": "La serviette",
             "srs_data": {
                 "score": 0,
-                "score_apprentissage": 0,
+                "score_apprentissage": 1,
                 "next_review_date": "2026-02-28T17:16:59.477236",
-                "next_review_date_apprentissage": "2026-02-28T17:16:59.477241"
+                "next_review_date_apprentissage": "2026-03-24T08:44:21.884535"
             }
         },
         {
@@ -1123,9 +1123,9 @@
             "term_primary": "Grillée",
             "srs_data": {
                 "score": 0,
-                "score_apprentissage": 0,
+                "score_apprentissage": 1,
                 "next_review_date": "2026-02-28T17:16:59.477382",
-                "next_review_date_apprentissage": "2026-02-28T17:16:59.477386"
+                "next_review_date_apprentissage": "2026-03-24T08:46:47.940784"
             }
         },
         {
@@ -1135,9 +1135,9 @@
             "term_primary": "Braisée",
             "srs_data": {
                 "score": 0,
-                "score_apprentissage": 0,
+                "score_apprentissage": -1,
                 "next_review_date": "2026-02-28T17:16:59.477530",
-                "next_review_date_apprentissage": "2026-02-28T17:16:59.477534"
+                "next_review_date_apprentissage": "2026-03-23T08:47:18.519072"
             }
         },
         {
@@ -1195,9 +1195,9 @@
             "term_primary": "C'est bon",
             "srs_data": {
                 "score": 0,
-                "score_apprentissage": 0,
+                "score_apprentissage": -1,
                 "next_review_date": "2026-02-28T17:16:59.478249",
-                "next_review_date_apprentissage": "2026-02-28T17:16:59.478254"
+                "next_review_date_apprentissage": "2026-03-23T08:45:48.976255"
             }
         },
         {
@@ -1255,9 +1255,9 @@
             "term_primary": "Pas cher",
             "srs_data": {
                 "score": 0,
-                "score_apprentissage": 0,
+                "score_apprentissage": -1,
                 "next_review_date": "2026-02-28T17:16:59.478988",
-                "next_review_date_apprentissage": "2026-02-28T17:16:59.478992"
+                "next_review_date_apprentissage": "2026-03-23T08:46:32.279059"
             }
         },
         {
@@ -1315,9 +1315,9 @@
             "term_primary": "Micro-ondes",
             "srs_data": {
                 "score": 0,
-                "score_apprentissage": 0,
+                "score_apprentissage": -1,
                 "next_review_date": "2026-03-13T09:43:57.170745",
-                "next_review_date_apprentissage": "2026-03-13T09:43:57.170748"
+                "next_review_date_apprentissage": "2026-03-23T08:45:41.908040"
             }
         },
         {
@@ -1327,9 +1327,9 @@
             "term_primary": "Bureau (meuble)",
             "srs_data": {
                 "score": 0,
-                "score_apprentissage": 0,
+                "score_apprentissage": -1,
                 "next_review_date": "2026-03-13T09:43:57.170855",
-                "next_review_date_apprentissage": "2026-03-13T09:43:57.170859"
+                "next_review_date_apprentissage": "2026-03-23T08:43:53.059689"
             }
         },
         {
@@ -1339,9 +1339,9 @@
             "term_primary": "Verre",
             "srs_data": {
                 "score": 0,
-                "score_apprentissage": 0,
+                "score_apprentissage": 1,
                 "next_review_date": "2026-03-13T09:43:57.171043",
-                "next_review_date_apprentissage": "2026-03-13T09:43:57.171050"
+                "next_review_date_apprentissage": "2026-03-24T08:41:22.985776"
             }
         },
         {
@@ -1435,9 +1435,9 @@
             "term_primary": "Chaîne hi-fi",
             "srs_data": {
                 "score": 0,
-                "score_apprentissage": 0,
+                "score_apprentissage": -1,
                 "next_review_date": "2026-03-13T09:45:43.199945",
-                "next_review_date_apprentissage": "2026-03-13T09:45:43.199948"
+                "next_review_date_apprentissage": "2026-03-23T08:45:30.865225"
             }
         },
         {
@@ -1471,9 +1471,9 @@
             "term_primary": "Table",
             "srs_data": {
                 "score": 0,
-                "score_apprentissage": 0,
+                "score_apprentissage": 1,
                 "next_review_date": "2026-03-13T09:45:43.200330",
-                "next_review_date_apprentissage": "2026-03-13T09:45:43.200333"
+                "next_review_date_apprentissage": "2026-03-24T08:47:28.891586"
             }
         },
         {
@@ -1531,9 +1531,9 @@
             "term_primary": "Fenêtre",
             "srs_data": {
                 "score": 0,
-                "score_apprentissage": 0,
+                "score_apprentissage": 1,
                 "next_review_date": "2026-03-13T09:45:43.200936",
-                "next_review_date_apprentissage": "2026-03-13T09:45:43.200938"
+                "next_review_date_apprentissage": "2026-03-24T08:47:35.433373"
             }
         },
         {
@@ -1579,9 +1579,9 @@
             "term_primary": "Bouilloire",
             "srs_data": {
                 "score": 0,
-                "score_apprentissage": -1,
+                "score_apprentissage": -2,
                 "next_review_date": "2026-03-13T09:46:45.567196",
-                "next_review_date_apprentissage": "2026-03-18T16:35:05.349406"
+                "next_review_date_apprentissage": "2026-03-23T08:45:59.407252"
             }
         },
         {
@@ -1615,9 +1615,9 @@
             "term_primary": "Lave-vaisselle",
             "srs_data": {
                 "score": 0,
-                "score_apprentissage": 0,
+                "score_apprentissage": 1,
                 "next_review_date": "2026-03-13T09:46:45.567632",
-                "next_review_date_apprentissage": "2026-03-13T09:46:45.567636"
+                "next_review_date_apprentissage": "2026-03-24T08:47:03.047547"
             }
         },
         {
@@ -1651,9 +1651,9 @@
             "term_primary": "Hotte aspirante",
             "srs_data": {
                 "score": 0,
-                "score_apprentissage": -1,
+                "score_apprentissage": -2,
                 "next_review_date": "2026-03-13T09:46:45.568169",
-                "next_review_date_apprentissage": "2026-03-18T16:34:16.960534"
+                "next_review_date_apprentissage": "2026-03-23T08:43:23.767944"
             }
         },
         {
@@ -1663,9 +1663,9 @@
             "term_primary": "Cuisinière / Plaques de cuisson",
             "srs_data": {
                 "score": 0,
-                "score_apprentissage": 0,
+                "score_apprentissage": -1,
                 "next_review_date": "2026-03-13T09:46:45.568294",
-                "next_review_date_apprentissage": "2026-03-13T09:46:45.568297"
+                "next_review_date_apprentissage": "2026-03-23T08:42:44.684870"
             }
         },
         {
@@ -1675,9 +1675,9 @@
             "term_primary": "Évier",
             "srs_data": {
                 "score": 0,
-                "score_apprentissage": -1,
+                "score_apprentissage": -2,
                 "next_review_date": "2026-03-13T09:46:45.568424",
-                "next_review_date_apprentissage": "2026-03-18T16:35:17.450443"
+                "next_review_date_apprentissage": "2026-03-23T08:44:39.476082"
             }
         },
         {
@@ -1699,9 +1699,9 @@
             "term_primary": "Étagère",
             "srs_data": {
                 "score": 1,
-                "score_apprentissage": 0,
+                "score_apprentissage": -1,
                 "next_review_date": "2026-03-21T07:23:44.915313",
-                "next_review_date_apprentissage": "2026-03-13T09:46:45.569151"
+                "next_review_date_apprentissage": "2026-03-23T08:44:10.347861"
             }
         },
         {
@@ -1723,9 +1723,9 @@
             "term_primary": "Chaise",
             "srs_data": {
                 "score": 0,
-                "score_apprentissage": 0,
+                "score_apprentissage": -1,
                 "next_review_date": "2026-03-13T09:46:45.569391",
-                "next_review_date_apprentissage": "2026-03-13T09:46:45.569395"
+                "next_review_date_apprentissage": "2026-03-23T08:49:04.984452"
             }
         },
         {
@@ -1735,9 +1735,9 @@
             "term_primary": "Imprimante",
             "srs_data": {
                 "score": 0,
-                "score_apprentissage": 0,
+                "score_apprentissage": -1,
                 "next_review_date": "2026-03-13T09:46:45.569574",
-                "next_review_date_apprentissage": "2026-03-13T09:46:45.569579"
+                "next_review_date_apprentissage": "2026-03-23T08:43:02.364846"
             }
         },
         {
@@ -1771,9 +1771,9 @@
             "term_primary": "Écran d'ordinateur",
             "srs_data": {
                 "score": 0,
-                "score_apprentissage": 0,
+                "score_apprentissage": -1,
                 "next_review_date": "2026-03-13T09:46:45.570009",
-                "next_review_date_apprentissage": "2026-03-13T09:46:45.570012"
+                "next_review_date_apprentissage": "2026-03-23T08:49:20.208933"
             }
         },
         {
@@ -1855,9 +1855,9 @@
             "term_primary": "Livre",
             "srs_data": {
                 "score": 0,
-                "score_apprentissage": 0,
+                "score_apprentissage": 1,
                 "next_review_date": "2026-03-13T09:49:24.081205",
-                "next_review_date_apprentissage": "2026-03-13T09:49:24.081208"
+                "next_review_date_apprentissage": "2026-03-24T08:44:44.612706"
             }
         },
         {
@@ -1891,9 +1891,9 @@
             "term_primary": "Miroir",
             "srs_data": {
                 "score": 0,
-                "score_apprentissage": -1,
+                "score_apprentissage": -2,
                 "next_review_date": "2026-03-13T09:49:24.081562",
-                "next_review_date_apprentissage": "2026-03-18T16:34:50.103463"
+                "next_review_date_apprentissage": "2026-03-23T08:41:28.079559"
             }
         },
         {
@@ -1975,9 +1975,9 @@
             "term_primary": "Douche",
             "srs_data": {
                 "score": 0,
-                "score_apprentissage": 0,
+                "score_apprentissage": -1,
                 "next_review_date": "2026-03-13T09:49:24.082402",
-                "next_review_date_apprentissage": "2026-03-13T09:49:24.082405"
+                "next_review_date_apprentissage": "2026-03-23T08:42:08.437750"
             }
         },
         {
